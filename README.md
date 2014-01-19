@@ -27,11 +27,11 @@ First you create an instance of a player object:
 Then on some action you can just show or hide the player: 
 ```
 if (_audioPlayer.isVisible) {
-        [_audioPlayer hideAnimated:YES];
-    }
-    else {
-        [_audioPlayer showAnimated:YES];
-    }
+	[_audioPlayer hideAnimated:YES];
+}
+else {
+	 [_audioPlayer showAnimated:YES];
+}
 ```
 
 It works in background if you add this to your application plist file: 
