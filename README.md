@@ -2,6 +2,9 @@
 
 Audio player component for iOS (both iPhone and iPad) with neat and flexible interface design. 
 
+##Youtube demo
+<a href="http://youtu.be/By0qU4dhHZ0">Watch</a>
+
 ##ScreenShot
 
 <p align="center"><img src="https://github.com/wzbozon/DKAudioPlayer/blob/master/SmallScreenshot.png?raw=true"></p>
