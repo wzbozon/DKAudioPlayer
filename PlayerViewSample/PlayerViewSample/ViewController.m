@@ -26,7 +26,7 @@
     
     NSString *audioFilePath = [[NSBundle mainBundle] pathForResource:@"sample.mp3" ofType:nil];
     
-    if ( ( audioFilePath ) && ( self.audioPlayer == nil ) ) {
+    if ( audioFilePath ) {
         self.audioPlayer = [[DKAudioPlayer alloc] initWithAudioFilePath:audioFilePath parentViewController:self];
     }
 }
