@@ -3,8 +3,6 @@
 //  PlayerViewSampleTests
 //
 //  Created by Dennis Kutlubaev on 17.01.14.
-//  Copyright (c) 2014 Alwawee. All rights reserved.
-//
 
 #import <XCTest/XCTest.h>
 

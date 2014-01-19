@@ -273,7 +273,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0500;
-				ORGANIZATIONNAME = Alwawee;
+				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					92E9AA0D188997A500168BBD = {
 						TestTargetID = 92E9A9E9188997A400168BBD;
