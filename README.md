@@ -2,6 +2,10 @@
 
 Audio player component for iOS (both iPhone and iPad) with neat and flexible interface design. 
 
+##ScreenShot
+
+<p align="center"><img src="https://github.com/wzbozon/DKAudioPlayer/blob/master/SmallScreenshot.png?raw=true"></p>
+
 ##How to use
 
 There is a sample project of a universal app for iPhone and iPad. Player can stretch to the width of a parent View Controller.
@@ -47,7 +51,7 @@ It supports iOS 6.1 and higher.
 ###Supported Orientations 
 It supports both vertical and horizontal orientations. 
 
-##ScreenShots
+##More ScreenShots
 ###iPhone
 
 <p align="center"><img src="https://github.com/wzbozon/DKAudioPlayer/blob/master/iPhoneScreenshot.png?raw=true"></p>
