@@ -14,9 +14,9 @@ Audio player component for iOS (both iPhone and iPad) with neat and flexible int
 <p align="center"><img src="https://github.com/wzbozon/DKAudioPlayer/blob/master/SmallScreenshot.png?raw=true"></p>
 
 ##Available to be added via CocoaPods
-'''
+```
 pod DKAudioPlayer
-'''
+```
 
 ##How to use
 
