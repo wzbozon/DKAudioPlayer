@@ -1,6 +1,6 @@
 #DKAudioPlayer
 
-Audio player component for iOS (both iPhone and iPad) with neat and flexible interface design. 
+Audio player component for iOS (both iPhone and iPad) with neat and flexible interface design. It can be added as a header view to the table view.
 
 ##GIF demo
 
@@ -31,18 +31,41 @@ First you create an instance of a player object:
     NSString *audioFilePath = [[NSBundle mainBundle] pathForResource:@"sample.mp3" ofType:nil];
     
     if ( audioFilePath ) {
-        self.audioPlayer = [[DKAudioPlayer alloc] initWithAudioFilePath:audioFilePath parentViewController:self];
+        
+        // The width of a player is equal to the width of a parent view
+        _audioPlayer = [[DKAudioPlayer alloc] initWithAudioFilePath:audioFilePath width:self.view.frame.size.width height:0];
+        
+        // Setting the origin of an audio player
+        CGRect frame = _audioPlayer.frame;
+        frame.origin = CGPointMake(0, self.view.frame.size.height - self.tabBarController.tabBar.frame.size.height);
+        _audioPlayer.frame = frame;
+        
+        // Adding player on a view
+        [self.view addSubview:_audioPlayer];
     }
 }
 ```
 
 Then on some action you can just show or hide the player: 
 ```
-if (_audioPlayer.isVisible) {
-	[_audioPlayer hideAnimated:YES];
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    if (! _audioPlayer.isVisible) {
+        [self.audioPlayer showAnimated:YES];
+    }
 }
-else {
-	 [_audioPlayer showAnimated:YES];
+
+
+- (IBAction)showHideClicked:(id)sender
+{
+    if (_audioPlayer.isVisible) {
+        [_audioPlayer hideAnimated:YES];
+    }
+    else {
+        [_audioPlayer showAnimated:YES];
+    }
 }
 ```
 

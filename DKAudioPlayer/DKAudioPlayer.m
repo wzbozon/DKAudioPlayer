@@ -62,15 +62,29 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:opacity]
 {
     CGRect frame = CGRectMake(0, 0, parentViewController.view.bounds.size.width, 75.0);
     
-    self = [super initWithFrame:frame];
+    self = [self initWithAudioFilePath:audioFilePath width:frame.size.width height:frame.size.height];
+    
+    frame.origin.y = parentViewController.view.bounds.size.height;
+    self.frame = frame;
+    [parentViewController.view addSubview:self];
+    [parentViewController.view bringSubviewToFront:self];
+    
+    return self;
+}
 
+
+- (id)initWithAudioFilePath:(NSString *)audioFilePath width:(CGFloat)width height:(CGFloat)height
+{
+    if (height == 0) height = 75.0;
+    
+    CGRect frame = CGRectMake(0, 0, width, height);
+    
+    self = [super initWithFrame:frame];
+    
     if (self) {
         
         _audioFilePath = audioFilePath;
         NSAssert(audioFilePath != nil, @"Audio file path cannot be nil");
-        
-        _parentViewController = parentViewController;
-        NSAssert(parentViewController != nil, @"ParentVC cannot be nil");
         
         _playerHeight = frame.size.height;
         _playerWidth = frame.size.width;
@@ -107,7 +121,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:opacity]
         playerBgImageView.frame = CGRectMake(_inset, _inset, _playerWidth - _inset * 2, _playerHeight - _inset * 2);
         playerBgImageView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
         [self addSubview:playerBgImageView];
-
+        
         _playPauseButton = [UIButton buttonWithType:UIButtonTypeCustom];
         _playPauseButton.autoresizesSubviews = YES;
         _playPauseButton.imageView.contentMode = UIViewContentModeScaleToFill;
@@ -147,12 +161,6 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:opacity]
         _bubbleView.hidden = YES;
         [self addSubview:_bubbleView];
         
-        CGRect frame = self.frame;
-        frame.origin.y = parentViewController.view.bounds.size.height;
-        self.frame = frame;
-        [parentViewController.view addSubview:self];
-        [parentViewController.view bringSubviewToFront:self];
-        
         self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
     }
     
@@ -175,6 +183,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:opacity]
 {
     if (! _audioPlayer.isPlaying) {
         [_audioPlayer play];
+        self.isBubbleViewVisible = YES;
         [self updatePlayButtonImage];
     }
 }
@@ -295,6 +304,14 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:opacity]
 - (void)audioPlayerEndInterruption:(AVAudioPlayer *)player withOptions:(NSUInteger)flags
 {
     [self updatePlayButtonImage];
+}
+
+
+- (void)setIsBubbleViewVisible:(BOOL)isBubbleViewVisible
+{
+    _isBubbleViewVisible = isBubbleViewVisible;
+    
+    _bubbleView.hidden = ! isBubbleViewVisible;
 }
 
 @end

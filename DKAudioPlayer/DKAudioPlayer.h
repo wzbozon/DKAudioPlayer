@@ -42,8 +42,14 @@
 @property (nonatomic, strong) UIViewController *parentViewController;
 @property (nonatomic) BOOL isVisible;
 
-// Create your player after view of a parent view controller is loaded in ViewDidLoad method
+// TODO: here are some problems with blinking of a bubble
+@property (nonatomic) BOOL isBubbleViewVisible;
+
+// Creates player and puts it on a parentViewController's view automatically
 - (id)initWithAudioFilePath:(NSString *)audioFilePath parentViewController:(UIViewController *)parentViewController;
+
+// Creates player with a given width, but doesn't add it on a parent view automatically
+- (id)initWithAudioFilePath:(NSString *)audioFilePath width:(CGFloat)width height:(CGFloat)height;
 
 // You can programmatically play or pause audio, played in this control
 - (void)play;
