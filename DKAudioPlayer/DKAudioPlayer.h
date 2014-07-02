@@ -58,6 +58,8 @@
 
 - (void)dismiss;
 
+- (void)playOrPause;
+
 // Use these methods to show or hide player
 - (void)showAnimated:(BOOL)animated;
 
