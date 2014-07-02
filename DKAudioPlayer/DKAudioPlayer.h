@@ -49,7 +49,10 @@
 - (id)initWithAudioFilePath:(NSString *)audioFilePath parentViewController:(UIViewController *)parentViewController;
 
 // Creates player with a given width, but doesn't add it on a parent view automatically
-- (id)initWithAudioFilePath:(NSString *)audioFilePath width:(CGFloat)width height:(CGFloat)height;
+- (id)initWithAudioFilePath:(NSString *)audioFilePath
+                      width:(CGFloat)width
+                     height:(CGFloat)height
+            backgroundColor:(UIColor *)backgroundColor;
 
 // You can programmatically play or pause audio, played in this control
 - (void)play;
@@ -57,6 +60,8 @@
 - (void)pause;
 
 - (void)dismiss;
+
+- (void)playOrPause;
 
 // Use these methods to show or hide player
 - (void)showAnimated:(BOOL)animated;

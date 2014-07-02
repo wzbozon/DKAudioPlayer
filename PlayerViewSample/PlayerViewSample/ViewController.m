@@ -44,7 +44,7 @@
     if ( audioFilePath ) {
         
         // The width of a player is equal to the width of a parent view
-        _audioPlayer = [[DKAudioPlayer alloc] initWithAudioFilePath:audioFilePath width:self.view.frame.size.width height:0];
+        _audioPlayer = [[DKAudioPlayer alloc] initWithAudioFilePath:audioFilePath width:self.view.frame.size.width height:0 backgroundColor:[UIColor clearColor]];
         
         // Setting the origin of an audio player
         CGRect frame = _audioPlayer.frame;

@@ -62,7 +62,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:opacity]
 {
     CGRect frame = CGRectMake(0, 0, parentViewController.view.bounds.size.width, 75.0);
     
-    self = [self initWithAudioFilePath:audioFilePath width:frame.size.width height:frame.size.height];
+    self = [self initWithAudioFilePath:audioFilePath width:frame.size.width height:frame.size.height backgroundColor:[UIColor clearColor]];
     
     frame.origin.y = parentViewController.view.bounds.size.height;
     self.frame = frame;
@@ -73,7 +73,10 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:opacity]
 }
 
 
-- (id)initWithAudioFilePath:(NSString *)audioFilePath width:(CGFloat)width height:(CGFloat)height
+- (id)initWithAudioFilePath:(NSString *)audioFilePath
+                      width:(CGFloat)width
+                     height:(CGFloat)height
+            backgroundColor:(UIColor *)backgroundColor
 {
     if (height == 0) height = 75.0;
     
@@ -113,7 +116,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:opacity]
         self.backgroundColor = [UIColor clearColor];
         
         UIView *backgroundView = [[UIView alloc] initWithFrame:self.bounds];
-        backgroundView.backgroundColor = RGB(0xe8e8e8);
+        backgroundView.backgroundColor = backgroundColor;
         backgroundView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
         [self addSubview:backgroundView];
         
