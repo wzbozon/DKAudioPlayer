@@ -54,7 +54,7 @@
         
         // The width of a player is equal to the width of a parent view
         // TODO: here are some problems with a size of a player (I had to make it bigger to make bubble visible since bubble is not inside player by default)
-        _audioPlayer = [[DKAudioPlayer alloc] initWithAudioFilePath:audioFilePath width:self.view.frame.size.width height:90.0];
+        _audioPlayer = [[DKAudioPlayer alloc] initWithAudioFilePath:audioFilePath width:self.view.frame.size.width height:90.0 backgroundColor:[UIColor clearColor]];
         
         // Setting the origin of an audio player
         CGRect frame = _audioPlayer.frame;
