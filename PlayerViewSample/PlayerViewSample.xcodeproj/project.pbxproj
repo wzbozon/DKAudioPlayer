@@ -13,8 +13,6 @@
 		92E9A9F8188997A400168BBD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 92E9A9F6188997A400168BBD /* InfoPlist.strings */; };
 		92E9A9FA188997A400168BBD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E9A9F9188997A400168BBD /* main.m */; };
 		92E9A9FE188997A400168BBD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E9A9FD188997A400168BBD /* AppDelegate.m */; };
-		92E9AA01188997A400168BBD /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92E9A9FF188997A400168BBD /* Main_iPhone.storyboard */; };
-		92E9AA04188997A400168BBD /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92E9AA02188997A400168BBD /* Main_iPad.storyboard */; };
 		92E9AA07188997A400168BBD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E9AA06188997A400168BBD /* ViewController.m */; };
 		92E9AA09188997A400168BBD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92E9AA08188997A400168BBD /* Images.xcassets */; };
 		92E9AA10188997A500168BBD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E9AA0F188997A500168BBD /* XCTest.framework */; };
@@ -40,6 +38,14 @@
 		92E9AADD1889BBC000168BBD /* player_progress_blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92E9AACB1889BBC000168BBD /* player_progress_blue@2x.png */; };
 		92E9AADE1889BBC000168BBD /* DKAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E9AACD1889BBC000168BBD /* DKAudioPlayer.m */; };
 		92E9AAE01889BDF600168BBD /* sample.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 92E9AADF1889BDF600168BBD /* sample.mp3 */; };
+		F8BACA7C192CFCBA00B6175B /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8BACA7B192CFCB900B6175B /* ViewController.xib */; };
+		F8BACA7F192D010600B6175B /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BACA7E192D010600B6175B /* TableViewController.m */; };
+		F8BACA83192D041100B6175B /* 42-photos.png in Resources */ = {isa = PBXBuildFile; fileRef = F8BACA81192D041100B6175B /* 42-photos.png */; };
+		F8BACA84192D041100B6175B /* 42-photos@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F8BACA82192D041100B6175B /* 42-photos@2x.png */; };
+		F8BACA87192D042600B6175B /* 259-list.png in Resources */ = {isa = PBXBuildFile; fileRef = F8BACA85192D042600B6175B /* 259-list.png */; };
+		F8BACA88192D042600B6175B /* 259-list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F8BACA86192D042600B6175B /* 259-list@2x.png */; };
+		F8BACA8B192D07AE00B6175B /* sample1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F8BACA89192D07AE00B6175B /* sample1.mp3 */; };
+		F8BACA8C192D07AE00B6175B /* sample2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F8BACA8A192D07AE00B6175B /* sample2.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,8 +69,6 @@
 		92E9A9FB188997A400168BBD /* PlayerViewSample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PlayerViewSample-Prefix.pch"; sourceTree = "<group>"; };
 		92E9A9FC188997A400168BBD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		92E9A9FD188997A400168BBD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		92E9AA00188997A400168BBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		92E9AA03188997A400168BBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		92E9AA05188997A400168BBD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		92E9AA06188997A400168BBD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		92E9AA08188997A400168BBD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -92,6 +96,15 @@
 		92E9AACC1889BBC000168BBD /* DKAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKAudioPlayer.h; sourceTree = "<group>"; };
 		92E9AACD1889BBC000168BBD /* DKAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKAudioPlayer.m; sourceTree = "<group>"; };
 		92E9AADF1889BDF600168BBD /* sample.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sample.mp3; sourceTree = "<group>"; };
+		F8BACA7B192CFCB900B6175B /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		F8BACA7D192D010600B6175B /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		F8BACA7E192D010600B6175B /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		F8BACA81192D041100B6175B /* 42-photos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "42-photos.png"; sourceTree = "<group>"; };
+		F8BACA82192D041100B6175B /* 42-photos@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "42-photos@2x.png"; sourceTree = "<group>"; };
+		F8BACA85192D042600B6175B /* 259-list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "259-list.png"; sourceTree = "<group>"; };
+		F8BACA86192D042600B6175B /* 259-list@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "259-list@2x.png"; sourceTree = "<group>"; };
+		F8BACA89192D07AE00B6175B /* sample1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sample1.mp3; sourceTree = "<group>"; };
+		F8BACA8A192D07AE00B6175B /* sample2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sample2.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,13 +164,15 @@
 		92E9A9F3188997A400168BBD /* PlayerViewSample */ = {
 			isa = PBXGroup;
 			children = (
+				F8BACA80192D040A00B6175B /* Icons */,
 				92E9AABA1889BBC000168BBD /* DKAudioPlayer */,
 				92E9A9FC188997A400168BBD /* AppDelegate.h */,
 				92E9A9FD188997A400168BBD /* AppDelegate.m */,
-				92E9A9FF188997A400168BBD /* Main_iPhone.storyboard */,
-				92E9AA02188997A400168BBD /* Main_iPad.storyboard */,
 				92E9AA05188997A400168BBD /* ViewController.h */,
 				92E9AA06188997A400168BBD /* ViewController.m */,
+				F8BACA7B192CFCB900B6175B /* ViewController.xib */,
+				F8BACA7D192D010600B6175B /* TableViewController.h */,
+				F8BACA7E192D010600B6175B /* TableViewController.m */,
 				92E9AA08188997A400168BBD /* Images.xcassets */,
 				92E9A9F4188997A400168BBD /* Supporting Files */,
 			);
@@ -167,6 +182,8 @@
 		92E9A9F4188997A400168BBD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F8BACA89192D07AE00B6175B /* sample1.mp3 */,
+				F8BACA8A192D07AE00B6175B /* sample2.mp3 */,
 				92E9AADF1889BDF600168BBD /* sample.mp3 */,
 				92E9A9F5188997A400168BBD /* PlayerViewSample-Info.plist */,
 				92E9A9F6188997A400168BBD /* InfoPlist.strings */,
@@ -226,6 +243,17 @@
 				92E9AACB1889BBC000168BBD /* player_progress_blue@2x.png */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		F8BACA80192D040A00B6175B /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				F8BACA85192D042600B6175B /* 259-list.png */,
+				F8BACA86192D042600B6175B /* 259-list@2x.png */,
+				F8BACA81192D041100B6175B /* 42-photos.png */,
+				F8BACA82192D041100B6175B /* 42-photos@2x.png */,
+			);
+			path = Icons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,19 +333,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				92E9AAD21889BBC000168BBD /* player_circle.png in Resources */,
-				92E9AA04188997A400168BBD /* Main_iPad.storyboard in Resources */,
+				F8BACA84192D041100B6175B /* 42-photos@2x.png in Resources */,
 				92E9AADB1889BBC000168BBD /* player_progress_bg@2x.png in Resources */,
 				92E9AACE1889BBC000168BBD /* player_bg.png in Resources */,
 				92E9AA09188997A400168BBD /* Images.xcassets in Resources */,
 				92E9AACF1889BBC000168BBD /* player_bg@2x.png in Resources */,
+				F8BACA83192D041100B6175B /* 42-photos.png in Resources */,
+				F8BACA8B192D07AE00B6175B /* sample1.mp3 in Resources */,
+				F8BACA8C192D07AE00B6175B /* sample2.mp3 in Resources */,
 				92E9AAD41889BBC000168BBD /* player_pause.png in Resources */,
 				92E9AADC1889BBC000168BBD /* player_progress_blue.png in Resources */,
 				92E9AAD01889BBC000168BBD /* player_bubble.png in Resources */,
 				92E9AAD31889BBC000168BBD /* player_circle@2x.png in Resources */,
 				92E9AADA1889BBC000168BBD /* player_progress_bg.png in Resources */,
+				F8BACA7C192CFCBA00B6175B /* ViewController.xib in Resources */,
+				F8BACA88192D042600B6175B /* 259-list@2x.png in Resources */,
 				92E9AAE01889BDF600168BBD /* sample.mp3 in Resources */,
 				92E9AAD81889BBC000168BBD /* player_player_bg.png in Resources */,
-				92E9AA01188997A400168BBD /* Main_iPhone.storyboard in Resources */,
+				F8BACA87192D042600B6175B /* 259-list.png in Resources */,
 				92E9AAD11889BBC000168BBD /* player_bubble@2x.png in Resources */,
 				92E9AAD91889BBC000168BBD /* player_player_bg@2x.png in Resources */,
 				92E9AADD1889BBC000168BBD /* player_progress_blue@2x.png in Resources */,
@@ -346,6 +379,7 @@
 				92E9AADE1889BBC000168BBD /* DKAudioPlayer.m in Sources */,
 				92E9AA07188997A400168BBD /* ViewController.m in Sources */,
 				92E9A9FE188997A400168BBD /* AppDelegate.m in Sources */,
+				F8BACA7F192D010600B6175B /* TableViewController.m in Sources */,
 				92E9A9FA188997A400168BBD /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,22 +409,6 @@
 				92E9A9F7188997A400168BBD /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		92E9A9FF188997A400168BBD /* Main_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				92E9AA00188997A400168BBD /* Base */,
-			);
-			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		92E9AA02188997A400168BBD /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				92E9AA03188997A400168BBD /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		92E9AA18188997A500168BBD /* InfoPlist.strings */ = {
