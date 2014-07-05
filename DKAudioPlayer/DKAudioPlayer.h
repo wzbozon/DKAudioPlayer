@@ -48,6 +48,7 @@
 // You can programmatically play or pause audio, played in this control
 - (void)play;
 
+// Use this method to pause playing audio programmatically
 - (void)pause;
 
 - (void)dismiss;
