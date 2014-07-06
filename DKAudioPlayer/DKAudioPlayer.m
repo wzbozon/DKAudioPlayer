@@ -147,6 +147,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:opacity]
         
         _bubbleView = [[UIView alloc] initWithFrame:CGRectMake(160, _slider.frame.origin.y - 46 + _slider.frame.size.height / 2, 72, 46)];
         _bubbleView.backgroundColor = [UIColor clearColor];
+        _bubbleView.frame = [self createCurrentPositionFrame];
         UIImageView *bubbleImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"player_bubble"]];
         bubbleImageView.contentMode = UIViewContentModeScaleToFill;
         bubbleImageView.frame = _bubbleView.bounds;
@@ -155,7 +156,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:opacity]
         _timeLabel.backgroundColor = [UIColor clearColor];
         _timeLabel.textAlignment = NSTextAlignmentCenter;
         _timeLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:10];
-        _timeLabel.text = @"3:45 / 5:00";
+        _timeLabel.text = [self calculateCurrentDuration];
         [_bubbleView addSubview:_timeLabel];
         
         _bubbleView.hidden = YES;
@@ -206,21 +207,11 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:opacity]
 
 - (void)onTimer:(NSTimer *)timer
 {
-    long currentPlaybackTime = _audioPlayer.currentTime;
     
-    int currentHours = (int)(currentPlaybackTime / 3600);
-    int currentMinutes = (int)((currentPlaybackTime / 60) - currentHours*60);
-    int currentSeconds = (int)(currentPlaybackTime % 60);
-    NSString *currentTimeString = (currentHours > 0) ? [NSString stringWithFormat:@"%i:%02d:%02d", currentHours, currentMinutes, currentSeconds] : [NSString stringWithFormat:@"%02d:%02d", currentMinutes, currentSeconds];
+    self.timeLabel.text = [self calculateCurrentDuration];
     
-    NSString *string = [NSString stringWithFormat:@"%@ / %@", currentTimeString, self.durationString];
-    self.timeLabel.text = string;
-    
-    [self.slider setValue:currentPlaybackTime animated:NO];
-    
-    CGRect frame = self.bubbleView.frame;
-    frame.origin.x = [self xPositionFromSliderValue:self.slider] - self.bubbleView.frame.size.width / 2.0;
-    self.bubbleView.frame = frame;
+    [self.slider setValue:_audioPlayer.currentTime animated:NO];
+    self.bubbleView.frame = [self createCurrentPositionFrame];
 }
 
 
@@ -312,6 +303,25 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:opacity]
     _isBubbleViewVisible = isBubbleViewVisible;
     
     _bubbleView.hidden = ! isBubbleViewVisible;
+}
+
+- (NSString *) calculateCurrentDuration
+{
+    long currentPlaybackTime = _audioPlayer.currentTime;
+
+    int currentHours = (int)(currentPlaybackTime / 3600);
+    int currentMinutes = (int)((currentPlaybackTime / 60) - currentHours*60);
+    int currentSeconds = (int)(currentPlaybackTime % 60);
+    NSString *currentTimeString = (currentHours > 0) ? [NSString stringWithFormat:@"%i:%02d:%02d", currentHours, currentMinutes, currentSeconds] : [NSString stringWithFormat:@"%02d:%02d", currentMinutes, currentSeconds];
+
+    return [NSString stringWithFormat:@"%@ / %@", currentTimeString, self.durationString];
+}
+
+-(CGRect) createCurrentPositionFrame
+{
+    CGRect frame = self.bubbleView.frame;
+    frame.origin.x = [self xPositionFromSliderValue:self.slider] - self.bubbleView.frame.size.width / 2.0;
+    return frame;
 }
 
 @end
