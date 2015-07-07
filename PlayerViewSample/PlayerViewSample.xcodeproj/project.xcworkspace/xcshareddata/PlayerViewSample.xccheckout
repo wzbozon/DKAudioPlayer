@@ -10,29 +10,29 @@
 	<string>PlayerViewSample</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>8629A4B9-01BC-47E5-96CF-0435AFD550D5</key>
+		<key>B291DB9F052AC7FE3CFD5969CC95254FE3DA70A9</key>
 		<string>https://github.com/wzbozon/DKAudioPlayer.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>PlayerViewSample/PlayerViewSample.xcodeproj/project.xcworkspace</string>
+	<string>PlayerViewSample/PlayerViewSample.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>8629A4B9-01BC-47E5-96CF-0435AFD550D5</key>
+		<key>B291DB9F052AC7FE3CFD5969CC95254FE3DA70A9</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/wzbozon/DKAudioPlayer.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>8629A4B9-01BC-47E5-96CF-0435AFD550D5</string>
+	<string>B291DB9F052AC7FE3CFD5969CC95254FE3DA70A9</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>8629A4B9-01BC-47E5-96CF-0435AFD550D5</string>
+			<string>B291DB9F052AC7FE3CFD5969CC95254FE3DA70A9</string>
 			<key>IDESourceControlWCCName</key>
 			<string>DKAudioPlayer</string>
 		</dict>

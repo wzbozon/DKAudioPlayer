@@ -32,6 +32,12 @@
 </array>
 */
 
+/*List of contributions:
+ Name: chrismeats
+ Link: https://github.com/chrismeats
+ Comment: - Added init methods to load audio files from urls using NSData
+ */
+
 
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
