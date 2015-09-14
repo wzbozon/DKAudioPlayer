@@ -15,27 +15,27 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "92E9A9E9188997A400168BBD"
-               BuildableName = "PlayerViewSample.app"
-               BlueprintName = "PlayerViewSample"
-               ReferencedContainer = "container:PlayerViewSample.xcodeproj">
+               BuildableName = "DKAudioPlayerSampleProject.app"
+               BlueprintName = "DKAudioPlayerSampleProject"
+               ReferencedContainer = "container:DKAudioPlayerSampleProject.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      buildConfiguration = "Debug">
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "92E9AA0D188997A500168BBD"
-               BuildableName = "PlayerViewSampleTests.xctest"
-               BlueprintName = "PlayerViewSampleTests"
-               ReferencedContainer = "container:PlayerViewSample.xcodeproj">
+               BuildableName = "DKAudioPlayerSampleProject.xctest"
+               BlueprintName = "DKAudioPlayerSampleProjectTests"
+               ReferencedContainer = "container:DKAudioPlayerSampleProject.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,46 +43,51 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "92E9A9E9188997A400168BBD"
-            BuildableName = "PlayerViewSample.app"
-            BlueprintName = "PlayerViewSample"
-            ReferencedContainer = "container:PlayerViewSample.xcodeproj">
+            BuildableName = "DKAudioPlayerSampleProject.app"
+            BlueprintName = "DKAudioPlayerSampleProject"
+            ReferencedContainer = "container:DKAudioPlayerSampleProject.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
+      <AdditionalOptions>
+      </AdditionalOptions>
    </TestAction>
    <LaunchAction
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Debug"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "92E9A9E9188997A400168BBD"
-            BuildableName = "PlayerViewSample.app"
-            BlueprintName = "PlayerViewSample"
-            ReferencedContainer = "container:PlayerViewSample.xcodeproj">
+            BuildableName = "DKAudioPlayerSampleProject.app"
+            BlueprintName = "DKAudioPlayerSampleProject"
+            ReferencedContainer = "container:DKAudioPlayerSampleProject.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
+      buildConfiguration = "Release"
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "92E9A9E9188997A400168BBD"
-            BuildableName = "PlayerViewSample.app"
-            BlueprintName = "PlayerViewSample"
-            ReferencedContainer = "container:PlayerViewSample.xcodeproj">
+            BuildableName = "DKAudioPlayerSampleProject.app"
+            BlueprintName = "DKAudioPlayerSampleProject"
+            ReferencedContainer = "container:DKAudioPlayerSampleProject.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

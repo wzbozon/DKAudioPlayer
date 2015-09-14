@@ -46,6 +46,7 @@
 		F8BACA88192D042600B6175B /* 259-list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F8BACA86192D042600B6175B /* 259-list@2x.png */; };
 		F8BACA8B192D07AE00B6175B /* sample1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F8BACA89192D07AE00B6175B /* sample1.mp3 */; };
 		F8BACA8C192D07AE00B6175B /* sample2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F8BACA8A192D07AE00B6175B /* sample2.mp3 */; };
+		F8EEE5F81BA73D600043E4C4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8EEE5F71BA73D600043E4C4 /* LaunchScreen.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,22 +60,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		92E9A9EA188997A400168BBD /* PlayerViewSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayerViewSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		92E9A9EA188997A400168BBD /* DKAudioPlayerSampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DKAudioPlayerSampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92E9A9ED188997A400168BBD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		92E9A9EF188997A400168BBD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		92E9A9F1188997A400168BBD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		92E9A9F5188997A400168BBD /* PlayerViewSample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PlayerViewSample-Info.plist"; sourceTree = "<group>"; };
+		92E9A9F5188997A400168BBD /* DKAudioPlayerSampleProject-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DKAudioPlayerSampleProject-Info.plist"; sourceTree = "<group>"; };
 		92E9A9F7188997A400168BBD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		92E9A9F9188997A400168BBD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		92E9A9FB188997A400168BBD /* PlayerViewSample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PlayerViewSample-Prefix.pch"; sourceTree = "<group>"; };
+		92E9A9FB188997A400168BBD /* DKAudioPlayerSampleProject-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DKAudioPlayerSampleProject-Prefix.pch"; sourceTree = "<group>"; };
 		92E9A9FC188997A400168BBD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		92E9A9FD188997A400168BBD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		92E9AA05188997A400168BBD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		92E9AA06188997A400168BBD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		92E9AA08188997A400168BBD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		92E9AA0E188997A500168BBD /* PlayerViewSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlayerViewSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		92E9AA0E188997A500168BBD /* DKAudioPlayerSampleProject.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DKAudioPlayerSampleProject.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		92E9AA0F188997A500168BBD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		92E9AA17188997A500168BBD /* PlayerViewSampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PlayerViewSampleTests-Info.plist"; sourceTree = "<group>"; };
+		92E9AA17188997A500168BBD /* DKAudioPlayerSampleProjectTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DKAudioPlayerSampleProjectTests-Info.plist"; sourceTree = "<group>"; };
 		92E9AA19188997A500168BBD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		92E9AA1B188997A500168BBD /* PlayerViewSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayerViewSampleTests.m; sourceTree = "<group>"; };
 		92E9AABC1889BBC000168BBD /* player_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player_bg.png; sourceTree = "<group>"; };
@@ -105,6 +106,7 @@
 		F8BACA86192D042600B6175B /* 259-list@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "259-list@2x.png"; sourceTree = "<group>"; };
 		F8BACA89192D07AE00B6175B /* sample1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sample1.mp3; sourceTree = "<group>"; };
 		F8BACA8A192D07AE00B6175B /* sample2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sample2.mp3; sourceTree = "<group>"; };
+		F8EEE5F71BA73D600043E4C4 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +136,7 @@
 		92E9A9E1188997A400168BBD = {
 			isa = PBXGroup;
 			children = (
-				92E9A9F3188997A400168BBD /* PlayerViewSample */,
+				92E9A9F3188997A400168BBD /* DKAudioPlayerSampleProject */,
 				92E9AA15188997A500168BBD /* PlayerViewSampleTests */,
 				92E9A9EC188997A400168BBD /* Frameworks */,
 				92E9A9EB188997A400168BBD /* Products */,
@@ -144,8 +146,8 @@
 		92E9A9EB188997A400168BBD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				92E9A9EA188997A400168BBD /* PlayerViewSample.app */,
-				92E9AA0E188997A500168BBD /* PlayerViewSampleTests.xctest */,
+				92E9A9EA188997A400168BBD /* DKAudioPlayerSampleProject.app */,
+				92E9AA0E188997A500168BBD /* DKAudioPlayerSampleProject.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -161,7 +163,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		92E9A9F3188997A400168BBD /* PlayerViewSample */ = {
+		92E9A9F3188997A400168BBD /* DKAudioPlayerSampleProject */ = {
 			isa = PBXGroup;
 			children = (
 				F8BACA80192D040A00B6175B /* Icons */,
@@ -176,19 +178,21 @@
 				92E9AA08188997A400168BBD /* Images.xcassets */,
 				92E9A9F4188997A400168BBD /* Supporting Files */,
 			);
+			name = DKAudioPlayerSampleProject;
 			path = PlayerViewSample;
 			sourceTree = "<group>";
 		};
 		92E9A9F4188997A400168BBD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F8EEE5F71BA73D600043E4C4 /* LaunchScreen.xib */,
 				F8BACA89192D07AE00B6175B /* sample1.mp3 */,
 				F8BACA8A192D07AE00B6175B /* sample2.mp3 */,
 				92E9AADF1889BDF600168BBD /* sample.mp3 */,
-				92E9A9F5188997A400168BBD /* PlayerViewSample-Info.plist */,
+				92E9A9F5188997A400168BBD /* DKAudioPlayerSampleProject-Info.plist */,
 				92E9A9F6188997A400168BBD /* InfoPlist.strings */,
 				92E9A9F9188997A400168BBD /* main.m */,
-				92E9A9FB188997A400168BBD /* PlayerViewSample-Prefix.pch */,
+				92E9A9FB188997A400168BBD /* DKAudioPlayerSampleProject-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -205,7 +209,7 @@
 		92E9AA16188997A500168BBD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				92E9AA17188997A500168BBD /* PlayerViewSampleTests-Info.plist */,
+				92E9AA17188997A500168BBD /* DKAudioPlayerSampleProjectTests-Info.plist */,
 				92E9AA18188997A500168BBD /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -259,9 +263,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		92E9A9E9188997A400168BBD /* PlayerViewSample */ = {
+		92E9A9E9188997A400168BBD /* DKAudioPlayerSampleProject */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 92E9AA1F188997A500168BBD /* Build configuration list for PBXNativeTarget "PlayerViewSample" */;
+			buildConfigurationList = 92E9AA1F188997A500168BBD /* Build configuration list for PBXNativeTarget "DKAudioPlayerSampleProject" */;
 			buildPhases = (
 				92E9A9E6188997A400168BBD /* Sources */,
 				92E9A9E7188997A400168BBD /* Frameworks */,
@@ -271,14 +275,14 @@
 			);
 			dependencies = (
 			);
-			name = PlayerViewSample;
+			name = DKAudioPlayerSampleProject;
 			productName = PlayerViewSample;
-			productReference = 92E9A9EA188997A400168BBD /* PlayerViewSample.app */;
+			productReference = 92E9A9EA188997A400168BBD /* DKAudioPlayerSampleProject.app */;
 			productType = "com.apple.product-type.application";
 		};
-		92E9AA0D188997A500168BBD /* PlayerViewSampleTests */ = {
+		92E9AA0D188997A500168BBD /* DKAudioPlayerSampleProjectTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 92E9AA22188997A500168BBD /* Build configuration list for PBXNativeTarget "PlayerViewSampleTests" */;
+			buildConfigurationList = 92E9AA22188997A500168BBD /* Build configuration list for PBXNativeTarget "DKAudioPlayerSampleProjectTests" */;
 			buildPhases = (
 				92E9AA0A188997A500168BBD /* Sources */,
 				92E9AA0B188997A500168BBD /* Frameworks */,
@@ -289,9 +293,9 @@
 			dependencies = (
 				92E9AA14188997A500168BBD /* PBXTargetDependency */,
 			);
-			name = PlayerViewSampleTests;
+			name = DKAudioPlayerSampleProjectTests;
 			productName = PlayerViewSampleTests;
-			productReference = 92E9AA0E188997A500168BBD /* PlayerViewSampleTests.xctest */;
+			productReference = 92E9AA0E188997A500168BBD /* DKAudioPlayerSampleProject.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -308,7 +312,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 92E9A9E5188997A400168BBD /* Build configuration list for PBXProject "PlayerViewSample" */;
+			buildConfigurationList = 92E9A9E5188997A400168BBD /* Build configuration list for PBXProject "DKAudioPlayerSampleProject" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -321,8 +325,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				92E9A9E9188997A400168BBD /* PlayerViewSample */,
-				92E9AA0D188997A500168BBD /* PlayerViewSampleTests */,
+				92E9A9E9188997A400168BBD /* DKAudioPlayerSampleProject */,
+				92E9AA0D188997A500168BBD /* DKAudioPlayerSampleProjectTests */,
 			);
 		};
 /* End PBXProject section */
@@ -348,6 +352,7 @@
 				92E9AADA1889BBC000168BBD /* player_progress_bg.png in Resources */,
 				F8BACA7C192CFCBA00B6175B /* ViewController.xib in Resources */,
 				F8BACA88192D042600B6175B /* 259-list@2x.png in Resources */,
+				F8EEE5F81BA73D600043E4C4 /* LaunchScreen.xib in Resources */,
 				92E9AAE01889BDF600168BBD /* sample.mp3 in Resources */,
 				92E9AAD81889BBC000168BBD /* player_player_bg.png in Resources */,
 				F8BACA87192D042600B6175B /* 259-list.png in Resources */,
@@ -397,7 +402,7 @@
 /* Begin PBXTargetDependency section */
 		92E9AA14188997A500168BBD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 92E9A9E9188997A400168BBD /* PlayerViewSample */;
+			target = 92E9A9E9188997A400168BBD /* DKAudioPlayerSampleProject */;
 			targetProxy = 92E9AA13188997A500168BBD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -438,6 +443,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -477,6 +483,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -500,10 +507,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "PlayerViewSample/PlayerViewSample-Prefix.pch";
-				INFOPLIST_FILE = "PlayerViewSample/PlayerViewSample-Info.plist";
+				GCC_PREFIX_HEADER = "PlayerViewSample/DKAudioPlayerSampleProject-Prefix.pch";
+				INFOPLIST_FILE = "PlayerViewSample/DKAudioPlayerSampleProject-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = DKAudioPlayerSampleProject;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -514,10 +521,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "PlayerViewSample/PlayerViewSample-Prefix.pch";
-				INFOPLIST_FILE = "PlayerViewSample/PlayerViewSample-Info.plist";
+				GCC_PREFIX_HEADER = "PlayerViewSample/DKAudioPlayerSampleProject-Prefix.pch";
+				INFOPLIST_FILE = "PlayerViewSample/DKAudioPlayerSampleProject-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = DKAudioPlayerSampleProject;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -532,13 +539,13 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "PlayerViewSample/PlayerViewSample-Prefix.pch";
+				GCC_PREFIX_HEADER = "PlayerViewSample/DKAudioPlayerSampleProject-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "PlayerViewSampleTests/PlayerViewSampleTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "PlayerViewSampleTests/DKAudioPlayerSampleProjectTests-Info.plist";
+				PRODUCT_NAME = DKAudioPlayerSampleProject;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -554,9 +561,9 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "PlayerViewSample/PlayerViewSample-Prefix.pch";
-				INFOPLIST_FILE = "PlayerViewSampleTests/PlayerViewSampleTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "PlayerViewSample/DKAudioPlayerSampleProject-Prefix.pch";
+				INFOPLIST_FILE = "PlayerViewSampleTests/DKAudioPlayerSampleProjectTests-Info.plist";
+				PRODUCT_NAME = DKAudioPlayerSampleProject;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -565,7 +572,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		92E9A9E5188997A400168BBD /* Build configuration list for PBXProject "PlayerViewSample" */ = {
+		92E9A9E5188997A400168BBD /* Build configuration list for PBXProject "DKAudioPlayerSampleProject" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				92E9AA1D188997A500168BBD /* Debug */,
@@ -574,7 +581,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		92E9AA1F188997A500168BBD /* Build configuration list for PBXNativeTarget "PlayerViewSample" */ = {
+		92E9AA1F188997A500168BBD /* Build configuration list for PBXNativeTarget "DKAudioPlayerSampleProject" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				92E9AA20188997A500168BBD /* Debug */,
@@ -583,7 +590,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		92E9AA22188997A500168BBD /* Build configuration list for PBXNativeTarget "PlayerViewSampleTests" */ = {
+		92E9AA22188997A500168BBD /* Build configuration list for PBXNativeTarget "DKAudioPlayerSampleProjectTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				92E9AA23188997A500168BBD /* Debug */,
