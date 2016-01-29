@@ -38,11 +38,11 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:opacity]
 @interface DKAudioPlayer()
 {
     AVAudioPlayer *_audioPlayer;
-    
+
     float _playerHeight;
     float _playerWidth;
     float _inset;
-    
+
     UIButton *_playPauseButton;
 }
 
@@ -59,7 +59,6 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:opacity]
 
 - (id)initWithData:(NSData *)audioData parentViewController:(UIViewController *)parentViewController
 {
-
     // initalize audio player from nsData
     [self initAudioPlayerWithData:audioData];
 
@@ -204,9 +203,9 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:opacity]
 
         self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
     }
-    
+
     return self;
-    
+
 }
 
 -(void) initAudioPlayerWithData:(NSData *)audioData
@@ -226,7 +225,6 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:opacity]
     _audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
     NSAssert(error == nil, @"Audio file not found");
 }
-
 
 - (void)playOrPause
 {
@@ -257,6 +255,11 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:opacity]
     }
 }
 
+-(void) setVolume:(float)volume
+{
+    _audioPlayer.volume = volume;
+}
+
 
 - (void)updatePlayButtonImage {
     NSString *imageName = _audioPlayer.isPlaying ? @"player_pause" : @"player_play";
@@ -266,9 +269,9 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:opacity]
 
 - (void)onTimer:(NSTimer *)timer
 {
-    
+
     self.timeLabel.text = [self calculateCurrentDuration];
-    
+
     [self.slider setValue:_audioPlayer.currentTime animated:NO];
     self.bubbleView.frame = [self createCurrentPositionFrame];
 }
@@ -278,9 +281,9 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:opacity]
 {
     float sliderRange = aSlider.frame.size.width - aSlider.currentThumbImage.size.width;
     float sliderOrigin = aSlider.frame.origin.x + (aSlider.currentThumbImage.size.width / 2.0);
-    
+
     float sliderValueToPixels = ((aSlider.value-aSlider.minimumValue)/(aSlider.maximumValue-aSlider.minimumValue) * sliderRange) + sliderOrigin;
-    
+
     return sliderValueToPixels;
 }
 
@@ -294,7 +297,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:opacity]
 - (void)hideAnimated:(BOOL)animated
 {
     _isVisible = NO;
-    
+
     [self changeToVisible:_isVisible animated:animated];
 }
 
@@ -302,7 +305,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:opacity]
 - (void)showAnimated:(BOOL)animated
 {
     _isVisible = YES;
-    
+
     [self changeToVisible:_isVisible animated:animated];
 }
 
@@ -311,7 +314,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:opacity]
 {
     CGRect playerFrame = self.frame;
     CGRect parentFrame = self.parentViewController.view.bounds;
-    
+
     if (visible) {
         playerFrame.origin.y -= _playerHeight;
         parentFrame.size.height -= _playerHeight;
@@ -322,14 +325,14 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:opacity]
         parentFrame.size.height += _playerHeight;
         _bubbleView.hidden = YES;
     }
-    
+
     if (animated) {
         [UIView animateWithDuration:0.4 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-            
+
             self.frame = playerFrame;
-            
+
         } completion:^(BOOL finished){
-            
+
         }];
     }
     else {
@@ -360,7 +363,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:opacity]
 - (void)setIsBubbleViewVisible:(BOOL)isBubbleViewVisible
 {
     _isBubbleViewVisible = isBubbleViewVisible;
-    
+
     _bubbleView.hidden = ! isBubbleViewVisible;
 }
 

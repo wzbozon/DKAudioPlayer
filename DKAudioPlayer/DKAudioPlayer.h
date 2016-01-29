@@ -26,11 +26,17 @@
 
 // Add this to your *.plist file to make your audio play in background mode too:
 /*
-<key>UIBackgroundModes</key>
-<array>
-<string>audio</string>
-</array>
-*/
+ <key>UIBackgroundModes</key>
+ <array>
+ <string>audio</string>
+ </array>
+ */
+
+/*List of contributions:
+ Name: chrismeats
+ Link: https://github.com/chrismeats
+ Comment: - Added init methods to load audio files from urls using NSData
+ */
 
 
 #import <UIKit/UIKit.h>
@@ -69,5 +75,7 @@
 - (void)showAnimated:(BOOL)animated;
 
 - (void)hideAnimated:(BOOL)animated;
+
+-(void) setVolume:(float)volume;
 
 @end
