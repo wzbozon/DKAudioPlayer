@@ -86,12 +86,3 @@ It supports iOS 6.1 and higher.
 ###Supported Orientations 
 It supports both vertical and horizontal orientations. 
 
-##More ScreenShots
-###iPhone
-
-<p align="center"><img src="https://github.com/wzbozon/DKAudioPlayer/blob/master/iPhoneScreenshot.png?raw=true"></p>
-
-###iPad
-
-<p align="center"><img src="https://github.com/wzbozon/DKAudioPlayer/blob/master/iPadScreenshot.png?raw=true"></p>
-
