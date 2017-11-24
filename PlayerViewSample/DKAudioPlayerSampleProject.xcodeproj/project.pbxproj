@@ -307,6 +307,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "";
 				TargetAttributes = {
+					92E9A9E9188997A400168BBD = {
+						DevelopmentTeam = XFV3M47D7P;
+					};
 					92E9AA0D188997A500168BBD = {
 						TestTargetID = 92E9A9E9188997A400168BBD;
 					};
@@ -506,10 +509,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = XFV3M47D7P;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PlayerViewSample/DKAudioPlayerSampleProject-Prefix.pch";
 				INFOPLIST_FILE = "PlayerViewSample/DKAudioPlayerSampleProject-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = DKAudioPlayerSampleProject;
 				WRAPPER_EXTENSION = app;
 			};
@@ -520,10 +524,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = XFV3M47D7P;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PlayerViewSample/DKAudioPlayerSampleProject-Prefix.pch";
 				INFOPLIST_FILE = "PlayerViewSample/DKAudioPlayerSampleProject-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = DKAudioPlayerSampleProject;
 				WRAPPER_EXTENSION = app;
 			};
