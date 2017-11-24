@@ -36,7 +36,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:opacity]
 
 @implementation DKAudioPlayer
 
-- (id)initWithData:(NSData *)audioData parentViewController:(UIViewController *)parentViewController
+- (instancetype)initWithData:(NSData *)audioData parentViewController:(UIViewController *)parentViewController
 {
     // initalize audio player from nsData
     [self initAudioPlayerWithData:audioData];
@@ -47,7 +47,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:opacity]
     return self;
 }
 
-- (id)initWithData:(NSData *)audioData width:(CGFloat)width height:(CGFloat)height
+- (instancetype)initWithData:(NSData *)audioData width:(CGFloat)width height:(CGFloat)height
 {
     // initalize audio player from nsData
     [self initAudioPlayerWithData:audioData];
@@ -58,7 +58,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:opacity]
     return self;
 }
 
-- (id)initWithAudioFilePath:(NSString *)audioFilePath parentViewController:(UIViewController *)parentViewController
+- (instancetype)initWithAudioFilePath:(NSString *)audioFilePath parentViewController:(UIViewController *)parentViewController
 {
     // initialize audio player from NSString
     [self initAudioPlayerWithString:audioFilePath];
@@ -70,7 +70,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:opacity]
 }
 
 
-- (id)initWithAudioFilePath:(NSString *)audioFilePath width:(CGFloat)width height:(CGFloat)height
+- (instancetype)initWithAudioFilePath:(NSString *)audioFilePath width:(CGFloat)width height:(CGFloat)height
 {
     // initialize audio player from NSString
     [self initAudioPlayerWithString:audioFilePath];
@@ -81,7 +81,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:opacity]
     return self;
 }
 
-- (id)initWithViewController:(UIViewController *) parentViewController
+- (instancetype)initWithViewController:(UIViewController *) parentViewController
 {
     CGRect frame = CGRectMake(0, 0, parentViewController.view.bounds.size.width, 75.0);
 
@@ -96,7 +96,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:opacity]
     return self;
 }
 
-- (id)initWithWidth:(CGFloat)width height:(CGFloat)height
+- (instancetype)initWithWidth:(CGFloat)width height:(CGFloat)height
 {
     if (height == 0) height = 75.0;
 
