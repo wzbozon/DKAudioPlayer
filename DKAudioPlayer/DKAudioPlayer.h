@@ -11,19 +11,6 @@
  </array>
  */
 
-/*List of contributions:
- Name: chrismeats
- Link: https://github.com/chrismeats
- Comment: - Added init methods to load audio files from urls using NSData
- */
-
-/*List of contributions:
- Name: chrismeats
- Link: https://github.com/chrismeats
- Comment: - Added init methods to load audio files from urls using NSData
- */
-
-
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 
@@ -36,27 +23,41 @@
 // TODO: here are some problems with blinking of a bubble
 @property (nonatomic) BOOL isBubbleViewVisible;
 
-// Creates player from NSData and puts it on a parentViewController's view automatically
+/**
+ Creates player from NSData and puts it on a parentViewController's view automatically
+ */
 - (id)initWithData:(NSData *)audioData parentViewController:(UIViewController *)parentViewController;
 
-// Creates player from NSData with a given width, but doesn't add it on a parent view automatically
+/**
+ Creates player from NSData with a given width, but doesn't add it on a parent view automatically
+ */
 - (id)initWithData:(NSData *)audioData width:(CGFloat)width height:(CGFloat)height;
 
-// Creates player and puts it on a parentViewController's view automatically
+/**
+ Creates player and puts it on a parentViewController's view automatically
+ */
 - (id)initWithAudioFilePath:(NSString *)audioFilePath parentViewController:(UIViewController *)parentViewController;
 
-// Creates player with a given width, but doesn't add it on a parent view automatically
+/**
+ Creates player with a given width, but doesn't add it on a parent view automatically
+ */
 - (id)initWithAudioFilePath:(NSString *)audioFilePath width:(CGFloat)width height:(CGFloat)height;
 
-// You can programmatically play or pause audio, played in this control
+/**
+ You can programmatically play or pause audio, played in this control
+ */
 - (void)play;
 
-// Use this method to pause playing audio programmatically
+/**
+ Use this method to pause playing audio programmatically
+ */
 - (void)pause;
 
 - (void)dismiss;
 
-// Use these methods to show or hide player
+/**
+ Use these methods to show or hide player
+ */
 - (void)showAnimated:(BOOL)animated;
 
 - (void)hideAnimated:(BOOL)animated;
