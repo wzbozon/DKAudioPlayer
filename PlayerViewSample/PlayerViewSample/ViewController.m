@@ -19,7 +19,6 @@
 
 @implementation ViewController
 
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -33,7 +32,6 @@
     
     return self;
 }
-
 
 - (void)viewDidLoad
 {
@@ -56,7 +54,6 @@
     }
 }
 
-
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
@@ -65,7 +62,6 @@
         [self.audioPlayer showAnimated:YES];
     }
 }
-
 
 - (IBAction)showHideClicked:(id)sender
 {
@@ -76,6 +72,5 @@
         [_audioPlayer showAnimated:YES];
     }
 }
-
 
 @end

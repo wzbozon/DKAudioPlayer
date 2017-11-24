@@ -19,7 +19,6 @@
 
 @implementation TableViewController
 
-
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -32,7 +31,6 @@
     return self;
 }
 
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -43,7 +41,6 @@
     // By default first audio file is set up to play
     [self setAudioPlayerForFileName:_tableData[0]];
 }
-
 
 // The logic is to reinitialize audioplayer for each file, this is not optimal, but simple solution
 - (void)setAudioPlayerForFileName:(NSString *)fileName
@@ -77,12 +74,10 @@
     return 1;
 }
 
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [_tableData count];
 }
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -101,7 +96,6 @@
     return cell;
 }
 
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Removing current audioplayer
@@ -113,7 +107,5 @@
     // Automatically staring playing that file
     [_audioPlayer play];
 }
-
-
 
 @end

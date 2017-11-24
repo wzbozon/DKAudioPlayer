@@ -2,27 +2,6 @@
 //  DKAudioPlayer.m
 //
 //  Created by Dennis Kutlubaev on 27.02.14.
-//  This code is distributed under the terms and conditions of the MIT license.
-//  Copyright (c) 2014 Dennis Kutlubaev (kutlubaev.denis@gmail.com)
-//
-// Permission is hereby granted, free of charge, to any person obtaining a copy
-// of this software and associated documentation files (the "Software"), to deal
-// in the Software without restriction, including without limitation the rights
-// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-// copies of the Software, and to permit persons to whom the Software is
-// furnished to do so, subject to the following conditions:
-//
-// The above copyright notice and this permission notice shall be included in
-// all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-// THE SOFTWARE.
-//
 
 #import "DKAudioPlayer.h"
 
@@ -68,7 +47,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:opacity]
     return self;
 }
 
--(id)initWithData:(NSData *)audioData width:(CGFloat)width height:(CGFloat)height
+- (id)initWithData:(NSData *)audioData width:(CGFloat)width height:(CGFloat)height
 {
     // initalize audio player from nsData
     [self initAudioPlayerWithData:audioData];
@@ -102,7 +81,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:opacity]
     return self;
 }
 
--(id) initWithViewController:(UIViewController *) parentViewController
+- (id)initWithViewController:(UIViewController *) parentViewController
 {
     CGRect frame = CGRectMake(0, 0, parentViewController.view.bounds.size.width, 75.0);
 
@@ -117,7 +96,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:opacity]
     return self;
 }
 
--(id) initWithWidth:(CGFloat)width height:(CGFloat)height
+- (id)initWithWidth:(CGFloat)width height:(CGFloat)height
 {
     if (height == 0) height = 75.0;
 
@@ -205,17 +184,16 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:opacity]
     }
 
     return self;
-
 }
 
--(void) initAudioPlayerWithData:(NSData *)audioData
+- (void)initAudioPlayerWithData:(NSData *)audioData
 {
     NSError *error = nil;
     _audioPlayer = [[AVAudioPlayer alloc] initWithData:audioData error:&error];
     NSAssert(error == nil, @"Audio not found");
 }
 
--(void) initAudioPlayerWithString:(NSString *)audioFilePath
+- (void)initAudioPlayerWithString:(NSString *)audioFilePath
 {
     _audioFilePath = audioFilePath;
     NSAssert(audioFilePath != nil, @"Audio file path cannot be nil");
@@ -236,7 +214,6 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:opacity]
     }
 }
 
-
 - (void)play
 {
     if (! _audioPlayer.isPlaying) {
@@ -246,7 +223,6 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:opacity]
     }
 }
 
-
 - (void)pause
 {
     if (_audioPlayer.isPlaying) {
@@ -255,17 +231,15 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:opacity]
     }
 }
 
--(void) setVolume:(float)volume
+- (void)setVolume:(float)volume
 {
     _audioPlayer.volume = volume;
 }
-
 
 - (void)updatePlayButtonImage {
     NSString *imageName = _audioPlayer.isPlaying ? @"player_pause" : @"player_play";
     [_playPauseButton setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
 }
-
 
 - (void)onTimer:(NSTimer *)timer
 {
@@ -275,7 +249,6 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:opacity]
     [self.slider setValue:_audioPlayer.currentTime animated:NO];
     self.bubbleView.frame = [self createCurrentPositionFrame];
 }
-
 
 - (float)xPositionFromSliderValue:(UISlider *)aSlider;
 {
@@ -287,12 +260,10 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:opacity]
     return sliderValueToPixels;
 }
 
-
 - (void)sliderChanged:(UISlider *)slider
 {
     [_audioPlayer setCurrentTime:(int)slider.value];
 }
-
 
 - (void)hideAnimated:(BOOL)animated
 {
@@ -301,14 +272,12 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:opacity]
     [self changeToVisible:_isVisible animated:animated];
 }
 
-
 - (void)showAnimated:(BOOL)animated
 {
     _isVisible = YES;
 
     [self changeToVisible:_isVisible animated:animated];
 }
-
 
 - (void)changeToVisible:(BOOL)visible animated:(BOOL)animated
 {
@@ -340,25 +309,21 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:opacity]
     }
 }
 
-
 - (void)dismiss
 {
     _audioPlayer = nil;
     [self removeFromSuperview];
 }
 
-
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
 {
     [self updatePlayButtonImage];
 }
 
-
 - (void)audioPlayerEndInterruption:(AVAudioPlayer *)player withOptions:(NSUInteger)flags
 {
     [self updatePlayButtonImage];
 }
-
 
 - (void)setIsBubbleViewVisible:(BOOL)isBubbleViewVisible
 {
@@ -367,7 +332,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:opacity]
     _bubbleView.hidden = ! isBubbleViewVisible;
 }
 
-- (NSString *) calculateCurrentDuration
+- (NSString *)calculateCurrentDuration
 {
     long currentPlaybackTime = _audioPlayer.currentTime;
 
@@ -379,7 +344,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:opacity]
     return [NSString stringWithFormat:@"%@ / %@", currentTimeString, self.durationString];
 }
 
--(CGRect) createCurrentPositionFrame
+- (CGRect)createCurrentPositionFrame
 {
     CGRect frame = self.bubbleView.frame;
     frame.origin.x = [self xPositionFromSliderValue:self.slider] - self.bubbleView.frame.size.width / 2.0;
