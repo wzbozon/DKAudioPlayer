@@ -10,8 +10,8 @@ Pod::Spec.new do |s|
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.author             = { "Dennis Kutlubaev" => "alwawee@gmail.com" }
   s.social_media_url = "http://twitter.com/wzbozon"
-  s.platform     = :ios, '6.0'
-  s.ios.deployment_target = '6.0'
+  s.platform     = :ios, '9.0'
+  s.ios.deployment_target = '9.0'
   s.source       = { :git => "https://github.com/wzbozon/DKAudioPlayer.git", :tag => "1.1.2" }
   s.source_files  = 'DKAudioPlayer/*.{h,m}'
   s.resources = "DKAudioPlayer/Assets/*.png"

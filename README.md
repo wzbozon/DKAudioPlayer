@@ -1,5 +1,10 @@
 # DKAudioPlayer
 
+[![CI Status](http://img.shields.io/travis/denis.kutlubaev@rubetek.com/DKAudioPlayer.svg?style=flat)](https://travis-ci.org/denis.kutlubaev@rubetek.com/DKAudioPlayer)
+[![Version](https://img.shields.io/cocoapods/v/DKAudioPlayer.svg?style=flat)](http://cocoapods.org/pods/DKAudioPlayer)
+[![License](https://img.shields.io/cocoapods/l/DKAudioPlayer.svg?style=flat)](http://cocoapods.org/pods/DKAudioPlayer)
+[![Platform](https://img.shields.io/cocoapods/p/DKAudioPlayer.svg?style=flat)](http://cocoapods.org/pods/DKAudioPlayer)
+
 Audio player component for iOS (both iPhone and iPad) with neat and flexible interface design. It can be added as a header view to the table view.
 
 ## GIF demo
@@ -7,15 +12,24 @@ Audio player component for iOS (both iPhone and iPad) with neat and flexible int
 <p align="center"><img src="https://github.com/wzbozon/DKAudioPlayer/blob/master/audioplayer.gif?raw=true"></p>
 
 ## Youtube demo
+
 <a href="http://youtu.be/By0qU4dhHZ0">Watch</a>
 
 ## ScreenShot
 
 <p align="center"><img src="https://github.com/wzbozon/DKAudioPlayer/blob/master/SmallScreenshot.png?raw=true"></p>
 
-## Available to be added via CocoaPods
-```
-pod DKAudioPlayer
+## Requirements
+
+Tested on iOS 9 and higher. But probably it supports iOS 6 and higher.
+
+## Installation
+
+DKAudioPlayer is available through [CocoaPods](http://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod 'DKAudioPlayer'
 ```
 
 ## How to use
@@ -80,9 +94,11 @@ Required background modes = App plays audio or streams audio/video using AirPlay
 </array>
 ```
 
-### Supported iOS Versions 
-It supports iOS 6.1 and higher. 
+## Author
 
-### Supported Orientations 
-It supports both vertical and horizontal orientations. 
+Dennis Kutlubaev, kutlubaev.denis@gmail.com
+
+## License
+
+DKAudioPlayer is available under the MIT license. See the LICENSE file for more info.
 

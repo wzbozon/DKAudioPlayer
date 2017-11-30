@@ -69,7 +69,6 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:opacity]
     return self;
 }
 
-
 - (instancetype)initWithAudioFilePath:(NSString *)audioFilePath width:(CGFloat)width height:(CGFloat)height
 {
     // initialize audio player from NSString
