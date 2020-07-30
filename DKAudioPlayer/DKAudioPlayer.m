@@ -319,11 +319,6 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:opacity]
     [self updatePlayButtonImage];
 }
 
-- (void)audioPlayerEndInterruption:(AVAudioPlayer *)player withOptions:(NSUInteger)flags
-{
-    [self updatePlayButtonImage];
-}
-
 - (void)setIsBubbleViewVisible:(BOOL)isBubbleViewVisible
 {
     _isBubbleViewVisible = isBubbleViewVisible;
