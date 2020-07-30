@@ -282,15 +282,20 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:opacity]
 {
     CGRect playerFrame = self.frame;
     CGRect parentFrame = self.parentViewController.view.bounds;
+    CGFloat bottomPadding = 0;
+    if (@available(iOS 11.0, *)) {
+        UIWindow *window = [UIApplication sharedApplication].keyWindow;
+        bottomPadding = window.safeAreaInsets.bottom;
+    }
 
     if (visible) {
-        playerFrame.origin.y -= _playerHeight;
-        parentFrame.size.height -= _playerHeight;
+        playerFrame.origin.y -= (_playerHeight + bottomPadding);
+        parentFrame.size.height -= (_playerHeight + bottomPadding);
         _bubbleView.hidden = NO;
     }
     else {
-        playerFrame.origin.y += _playerHeight;
-        parentFrame.size.height += _playerHeight;
+        playerFrame.origin.y += (_playerHeight + bottomPadding);
+        parentFrame.size.height += (_playerHeight + bottomPadding);
         _bubbleView.hidden = YES;
     }
 
