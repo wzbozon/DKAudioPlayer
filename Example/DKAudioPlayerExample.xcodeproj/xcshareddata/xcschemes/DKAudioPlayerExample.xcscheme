@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0510"
+   LastUpgradeVersion = "1160"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "92E9A9E9188997A400168BBD"
-               BuildableName = "DKAudioPlayerSampleProject.app"
-               BlueprintName = "DKAudioPlayerSampleProject"
-               ReferencedContainer = "container:DKAudioPlayerSampleProject.xcodeproj">
+               BuildableName = "DKAudioPlayerExample.app"
+               BlueprintName = "DKAudioPlayerExample"
+               ReferencedContainer = "container:DKAudioPlayerExample.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,28 +28,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "92E9AA0D188997A500168BBD"
-               BuildableName = "DKAudioPlayerSampleProject.xctest"
-               BlueprintName = "DKAudioPlayerSampleProjectTests"
-               ReferencedContainer = "container:DKAudioPlayerSampleProject.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "92E9A9E9188997A400168BBD"
-            BuildableName = "DKAudioPlayerSampleProject.app"
-            BlueprintName = "DKAudioPlayerSampleProject"
-            ReferencedContainer = "container:DKAudioPlayerSampleProject.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -66,13 +45,11 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "92E9A9E9188997A400168BBD"
-            BuildableName = "DKAudioPlayerSampleProject.app"
-            BlueprintName = "DKAudioPlayerSampleProject"
-            ReferencedContainer = "container:DKAudioPlayerSampleProject.xcodeproj">
+            BuildableName = "DKAudioPlayerExample.app"
+            BlueprintName = "DKAudioPlayerExample"
+            ReferencedContainer = "container:DKAudioPlayerExample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -85,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "92E9A9E9188997A400168BBD"
-            BuildableName = "DKAudioPlayerSampleProject.app"
-            BlueprintName = "DKAudioPlayerSampleProject"
-            ReferencedContainer = "container:DKAudioPlayerSampleProject.xcodeproj">
+            BuildableName = "DKAudioPlayerExample.app"
+            BlueprintName = "DKAudioPlayerExample"
+            ReferencedContainer = "container:DKAudioPlayerExample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

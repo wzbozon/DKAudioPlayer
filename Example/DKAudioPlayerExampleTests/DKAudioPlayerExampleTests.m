@@ -1,16 +1,16 @@
 //
-//  PlayerViewSampleTests.m
-//  PlayerViewSampleTests
+//  DKAudioPlayerExampleTests.m
+//  DKAudioPlayerExampleTests
 //
 //  Created by Dennis Kutlubaev on 17.01.14.
 
 #import <XCTest/XCTest.h>
 
-@interface PlayerViewSampleTests : XCTestCase
+@interface DKAudioPlayerExampleTests : XCTestCase
 
 @end
 
-@implementation PlayerViewSampleTests
+@implementation DKAudioPlayerExampleTests
 
 - (void)setUp
 {
