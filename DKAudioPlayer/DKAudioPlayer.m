@@ -180,6 +180,8 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:opacity]
         [self addSubview:_bubbleView];
 
         self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
+
+        self.duration = _audioPlayer.duration;
     }
 
     return self;
@@ -335,11 +337,15 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:opacity]
 {
     long currentPlaybackTime = _audioPlayer.currentTime;
 
+    self.currentSecond = (int)currentPlaybackTime;
+    
     int currentHours = (int)(currentPlaybackTime / 3600);
     int currentMinutes = (int)((currentPlaybackTime / 60) - currentHours*60);
     int currentSeconds = (int)(currentPlaybackTime % 60);
     NSString *currentTimeString = (currentHours > 0) ? [NSString stringWithFormat:@"%i:%02d:%02d", currentHours, currentMinutes, currentSeconds] : [NSString stringWithFormat:@"%02d:%02d", currentMinutes, currentSeconds];
 
+    [self.delegate didUpdatePlaybackTimeAudioPlayer:self];
+    
     return [NSString stringWithFormat:@"%@ / %@", currentTimeString, self.durationString];
 }
 

@@ -14,11 +14,25 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 
+@class DKAudioPlayer;
+@protocol DKAudioPlayerDelegate <NSObject>
+
+- (void)didUpdatePlaybackTimeAudioPlayer:(DKAudioPlayer *)audioPlayer;
+
+@end
+
 @interface DKAudioPlayer : UIView <AVAudioPlayerDelegate>
 
+@property (nonatomic, weak) id <DKAudioPlayerDelegate> delegate;
 @property (nonatomic, strong) NSString *audioFilePath;
 @property (nonatomic, strong) UIViewController *parentViewController;
 @property (nonatomic) BOOL isVisible;
+
+// Current playback time
+@property (nonatomic) int currentSecond;
+
+// Duration
+@property (nonatomic) long duration;
 
 // TODO: here are some problems with blinking of a bubble
 @property (nonatomic) BOOL isBubbleViewVisible;
