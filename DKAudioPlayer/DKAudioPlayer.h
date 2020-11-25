@@ -67,6 +67,9 @@
  */
 - (void)pause;
 
+/**
+ Use this method to stop AVAudioPlayer and remove the DKAudioPlayer
+ */
 - (void)dismiss;
 
 /**
