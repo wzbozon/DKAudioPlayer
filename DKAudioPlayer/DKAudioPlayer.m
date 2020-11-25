@@ -171,6 +171,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:opacity]
         [_bubbleView addSubview:bubbleImageView];
         _timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 10, 72, 11)];
         _timeLabel.backgroundColor = [UIColor clearColor];
+        _timeLabel.textColor = [UIColor blackColor];
         _timeLabel.textAlignment = NSTextAlignmentCenter;
         _timeLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:10];
         _timeLabel.text = [self calculateCurrentDuration];
