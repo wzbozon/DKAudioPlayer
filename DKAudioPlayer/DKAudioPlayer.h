@@ -27,6 +27,7 @@
 @property (nonatomic, strong) NSString *audioFilePath;
 @property (nonatomic, strong) UIViewController *parentViewController;
 @property (nonatomic) BOOL isVisible;
+@property (nonatomic, strong) UIColor *backgroundViewColor;
 
 // Current playback time
 @property (nonatomic) int currentSecond;

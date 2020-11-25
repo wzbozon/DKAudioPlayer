@@ -21,6 +21,7 @@
 @property (nonatomic, strong) UILabel *timeLabel;
 @property (nonatomic, strong) UIView *bubbleView;
 @property (nonatomic, strong) UISlider *slider;
+@property (nonatomic, strong) UIView *backgroundView;
 
 @end
 
@@ -120,10 +121,10 @@
         self.autoresizesSubviews = YES;
         self.backgroundColor = [UIColor clearColor];
 
-        UIView *backgroundView = [[UIView alloc] initWithFrame:self.bounds];
-        backgroundView.backgroundColor = [UIColor colorWithRed:232.0/255.0 green:232.0/255.0 blue:232.0/255.0 alpha:1.0];
-        backgroundView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-        [self addSubview:backgroundView];
+        self.backgroundView = [[UIView alloc] initWithFrame:self.bounds];
+        self.backgroundView.backgroundColor = [UIColor colorWithRed:232.0/255.0 green:232.0/255.0 blue:232.0/255.0 alpha:1.0];
+        self.backgroundView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+        [self addSubview:self.backgroundView];
 
         UIImageView *playerBgImageView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"player_player_bg"] stretchableImageWithLeftCapWidth:5 topCapHeight:5]];
         playerBgImageView.frame = CGRectMake(_inset, _inset, _playerWidth - _inset * 2, _playerHeight - _inset * 2);
@@ -344,6 +345,13 @@
     CGRect frame = self.bubbleView.frame;
     frame.origin.x = [self xPositionFromSliderValue:self.slider] - self.bubbleView.frame.size.width / 2.0;
     return frame;
+}
+
+- (void)setBackgroundViewColor:(UIColor *)backgroundViewColor
+{
+    _backgroundViewColor = backgroundViewColor;
+
+    self.backgroundView.backgroundColor = backgroundViewColor;
 }
 
 @end
