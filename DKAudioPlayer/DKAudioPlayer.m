@@ -5,15 +5,6 @@
 
 #import "DKAudioPlayer.h"
 
-#define RGBA(rgbValue, opacity) [UIColor \
-colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
-green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \
-blue:((float)(rgbValue & 0xFF))/255.0 alpha:opacity]
-
-#define RGB(rgbValue) RGBA(rgbValue, 1.0)
-
-#define IS_IOS7_OR_HIGHER !([[[UIDevice currentDevice] systemVersion] compare:@"7.0" options:NSNumericSearch] == NSOrderedAscending)
-
 @interface DKAudioPlayer()
 {
     AVAudioPlayer *_audioPlayer;
@@ -130,7 +121,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:opacity]
         self.backgroundColor = [UIColor clearColor];
 
         UIView *backgroundView = [[UIView alloc] initWithFrame:self.bounds];
-        backgroundView.backgroundColor = RGB(0xe8e8e8);
+        backgroundView.backgroundColor = [UIColor colorWithRed:232.0/255.0 green:232.0/255.0 blue:232.0/255.0 alpha:1.0];
         backgroundView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
         [self addSubview:backgroundView];
 
@@ -152,10 +143,8 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:opacity]
         CGRect sliderFrame = CGRectMake(originX, originY, frame.size.width - originX - _inset * 2, 34);
         _slider = [[UISlider alloc] initWithFrame:sliderFrame];
         _slider.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-        if ( ! IS_IOS7_OR_HIGHER ) {
-            [_slider setMaximumTrackImage:[[UIImage imageNamed:@"player_progress_bg"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 10, 0, 10)]  forState:UIControlStateNormal];
-            [_slider setMinimumTrackImage:[[UIImage imageNamed:@"player_progress_blue"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 10, 0, 10)]  forState:UIControlStateNormal];
-        }
+        [_slider setMaximumTrackImage:[[UIImage imageNamed:@"player_progress_bg"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 10, 0, 10)]  forState:UIControlStateNormal];
+        [_slider setMinimumTrackImage:[[UIImage imageNamed:@"player_progress_blue"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 10, 0, 10)]  forState:UIControlStateNormal];
         [_slider setThumbImage:[UIImage imageNamed:@"player_circle"] forState:UIControlStateNormal];
         _slider.minimumValue = 0.0;
         _slider.maximumValue = _audioPlayer.duration;
