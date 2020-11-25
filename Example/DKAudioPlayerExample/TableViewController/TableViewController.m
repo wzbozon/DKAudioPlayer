@@ -38,6 +38,13 @@
     // List of audio file names
     _tableData = @[@"sample.mp3", @"sample1.mp3", @"sample2.mp3"];
     
+
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+
     // By default first audio file is set up to play
     [self setAudioPlayerForFileName:_tableData[0]];
 }
@@ -48,21 +55,23 @@
     NSString *audioFilePath = [[NSBundle mainBundle] pathForResource:fileName ofType:nil];
     
     if ( audioFilePath ) {
-        
-        // The width of a player is equal to the width of a parent view
-        // TODO: here are some problems with a size of a player (I had to make it bigger to make bubble visible since bubble is not inside player by default)
-        _audioPlayer = [[DKAudioPlayer alloc] initWithAudioFilePath:audioFilePath width:self.view.frame.size.width height:90.0];
+
+        UIView *containerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, UIScreen.mainScreen.bounds.size.width, 90)];
+        _audioPlayer = [[DKAudioPlayer alloc] initWithAudioFilePath:audioFilePath width:containerView.bounds.size.width height:75];
         
         // Setting the origin of an audio player
         CGRect frame = _audioPlayer.frame;
-        frame.origin = CGPointMake(0, _audioPlayer.frame.size.height);
+        frame.origin = CGPointMake(0, 15);
         _audioPlayer.frame = frame;
         
         // TODO: here are some problems with blinking of a bubble
         _audioPlayer.isBubbleViewVisible = YES;
+
+        containerView.backgroundColor = [UIColor colorWithRed:232.0/255.0 green:232.0/255.0 blue:232.0/255.0 alpha:1.0];
+        [containerView addSubview:_audioPlayer];
         
         // Adding player on a view
-        self.tableView.tableHeaderView = _audioPlayer;
+        self.tableView.tableHeaderView = containerView;
     }
 }
 
