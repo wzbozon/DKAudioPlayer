@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -27,6 +28,7 @@
                     </connections>
                 </button>
             </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="y3n-2o-O6j" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="8sQ-az-PPw"/>
                 <constraint firstItem="y3n-2o-O6j" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="lRa-1v-dYp"/>
@@ -35,4 +37,9 @@
             <point key="canvasLocation" x="132" y="137"/>
         </view>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
