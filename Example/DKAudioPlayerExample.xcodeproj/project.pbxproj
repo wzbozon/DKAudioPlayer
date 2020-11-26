@@ -112,7 +112,7 @@
 		92E9AA1B188997A500168BBD /* DKAudioPlayerExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKAudioPlayerExampleTests.m; sourceTree = "<group>"; };
 		F80754FE1FD0034A00E8CEDC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		F80755001FD003EB00E8CEDC /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		F80755031FD0044200E8CEDC /* DKAudioPlayer.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = DKAudioPlayer.podspec; path = ../DKAudioPlayer.podspec; sourceTree = "<group>"; };
+		F80755031FD0044200E8CEDC /* DKAudioPlayer.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = DKAudioPlayer.podspec; path = ../DKAudioPlayer.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
