@@ -7,7 +7,7 @@
 //
 
 #import "TableViewController.h"
-#import "DKAudioPlayer.h"
+#import <DKAudioPlayer/DKAudioPlayer.h>
 
 @interface TableViewController ()
 

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "DKAudioPlayer"
-  s.version      = "1.2.0"
+  s.version      = "1.2.1"
   s.summary      = "Audio player component for iOS (both iPhone and iPad) with neat and flexible interface design."
   s.description  = <<-DESC
                    Audio player component for iOS (both iPhone and iPad) with neat and flexible interface design. It could be useful if you need to add a little player as one of the features of your app. Also can be used to study how to play audio on iOS.  
@@ -12,8 +12,8 @@ Pod::Spec.new do |s|
   s.social_media_url = "http://twitter.com/wzbozon"
   s.platform     = :ios, '11.0'
   s.ios.deployment_target = '11.0'
-  s.source       = { :git => "https://github.com/wzbozon/DKAudioPlayer.git", :tag => "1.2.0" }
-  s.source_files  = 'DKAudioPlayer/*.{h,m}'
-  s.resources = "DKAudioPlayer/Assets/*.png"
+  s.source       = { :git => "https://github.com/wzbozon/DKAudioPlayer.git", :tag => "1.2.1" }
+  s.source_files  = 'DKAudioPlayer/DKAudioPlayer/*.{h,m}'
+  s.resources = "DKAudioPlayer/DKAudioPlayer/Assets/*.png"
   s.requires_arc = true
 end

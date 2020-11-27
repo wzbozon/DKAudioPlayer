@@ -5,7 +5,7 @@
 //  Created by Dennis Kutlubaev on 17.01.14.
 
 #import "ViewController.h"
-#import "DKAudioPlayer.h"
+#import <DKAudioPlayer/DKAudioPlayer.h>
 
 
 @interface ViewController ()

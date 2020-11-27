@@ -11,8 +11,17 @@
  </array>
  */
 
+#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
+
+//! Project version number for DKAudioPlayer.
+FOUNDATION_EXPORT double DKAudioPlayerVersionNumber;
+
+//! Project version string for DKAudioPlayer.
+FOUNDATION_EXPORT const unsigned char DKAudioPlayerVersionString[];
+
+// In this header, you should import all the public headers of your framework using statements like #import <DKAudioPlayer/PublicHeader.h>
 
 @class DKAudioPlayer;
 @protocol DKAudioPlayerDelegate <NSObject>

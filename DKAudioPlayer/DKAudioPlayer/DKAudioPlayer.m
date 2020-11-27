@@ -126,7 +126,12 @@
         self.backgroundView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
         [self addSubview:self.backgroundView];
 
-        UIImageView *playerBgImageView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"player_player_bg"] stretchableImageWithLeftCapWidth:5 topCapHeight:5]];
+        NSBundle *frameworkBundle = [NSBundle bundleForClass:[self class]];
+
+        UIImageView *playerBgImageView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"player_player_bg"
+                                                                                        inBundle:frameworkBundle
+                                                                   compatibleWithTraitCollection:nil]
+                                                                             stretchableImageWithLeftCapWidth:5 topCapHeight:5]];
         playerBgImageView.frame = CGRectMake(_inset, _inset, _playerWidth - _inset * 2, _playerHeight - _inset * 2);
         playerBgImageView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
         [self addSubview:playerBgImageView];
@@ -134,7 +139,10 @@
         _playPauseButton = [UIButton buttonWithType:UIButtonTypeCustom];
         _playPauseButton.autoresizesSubviews = YES;
         _playPauseButton.imageView.contentMode = UIViewContentModeScaleToFill;
-        [_playPauseButton setImage:[UIImage imageNamed:@"player_play"] forState:UIControlStateNormal];
+        [_playPauseButton setImage:[UIImage imageNamed:@"player_play"
+                                              inBundle:frameworkBundle
+                         compatibleWithTraitCollection:nil]
+                          forState:UIControlStateNormal];
         [_playPauseButton setFrame:CGRectMake(_inset, _inset, _playerHeight - 2 * _inset, _playerHeight - 2 * _inset)];
         [_playPauseButton addTarget:self action:@selector(playOrPause) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:_playPauseButton];
@@ -144,9 +152,20 @@
         CGRect sliderFrame = CGRectMake(originX, originY, frame.size.width - originX - _inset * 2, 34);
         _slider = [[UISlider alloc] initWithFrame:sliderFrame];
         _slider.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-        [_slider setMaximumTrackImage:[[UIImage imageNamed:@"player_progress_bg"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 10, 0, 10)]  forState:UIControlStateNormal];
-        [_slider setMinimumTrackImage:[[UIImage imageNamed:@"player_progress_blue"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 10, 0, 10)]  forState:UIControlStateNormal];
-        [_slider setThumbImage:[UIImage imageNamed:@"player_circle"] forState:UIControlStateNormal];
+        [_slider setMaximumTrackImage:[[UIImage imageNamed:@"player_progress_bg"
+                                                  inBundle:frameworkBundle
+                             compatibleWithTraitCollection:nil]
+                                       resizableImageWithCapInsets:UIEdgeInsetsMake(0, 10, 0, 10)]
+                             forState:UIControlStateNormal];
+        [_slider setMinimumTrackImage:[[UIImage imageNamed:@"player_progress_blue"
+                                                  inBundle:frameworkBundle
+                             compatibleWithTraitCollection:nil]
+                                       resizableImageWithCapInsets:UIEdgeInsetsMake(0, 10, 0, 10)]
+                             forState:UIControlStateNormal];
+        [_slider setThumbImage:[UIImage imageNamed:@"player_circle"
+                                          inBundle:frameworkBundle
+                     compatibleWithTraitCollection:nil]
+                      forState:UIControlStateNormal];
         _slider.minimumValue = 0.0;
         _slider.maximumValue = _audioPlayer.duration;
         [_slider addTarget:self action:@selector(sliderChanged:) forControlEvents:UIControlEventValueChanged];
@@ -155,7 +174,9 @@
         _bubbleView = [[UIView alloc] initWithFrame:CGRectMake(160, _slider.frame.origin.y - 46 + _slider.frame.size.height / 2, 72, 46)];
         _bubbleView.backgroundColor = [UIColor clearColor];
         _bubbleView.frame = [self createCurrentPositionFrame];
-        UIImageView *bubbleImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"player_bubble"]];
+        UIImageView *bubbleImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"player_bubble"
+                                                                                     inBundle:frameworkBundle
+                                                                compatibleWithTraitCollection:nil]];
         bubbleImageView.contentMode = UIViewContentModeScaleToFill;
         bubbleImageView.frame = _bubbleView.bounds;
         [_bubbleView addSubview:bubbleImageView];
@@ -228,9 +249,14 @@
     _audioPlayer.volume = volume;
 }
 
-- (void)updatePlayButtonImage {
+- (void)updatePlayButtonImage
+{
+    NSBundle *frameworkBundle = [NSBundle bundleForClass:[self class]];
     NSString *imageName = _audioPlayer.isPlaying ? @"player_pause" : @"player_play";
-    [_playPauseButton setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
+    [_playPauseButton setImage:[UIImage imageNamed:imageName
+                                          inBundle:frameworkBundle
+                     compatibleWithTraitCollection:nil]
+                      forState:UIControlStateNormal];
 }
 
 - (void)onTimer:(NSTimer *)timer
