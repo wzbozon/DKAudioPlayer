@@ -12,8 +12,8 @@ Pod::Spec.new do |s|
   s.social_media_url = "http://twitter.com/wzbozon"
   s.platform     = :ios, '11.0'
   s.ios.deployment_target = '11.0'
-  s.source       = { :git => "https://github.com/wzbozon/DKAudioPlayer.git", :tag => "1.2.1" }
-  s.source_files  = 'DKAudioPlayer/DKAudioPlayer/*.{h,m}'
-  s.resources = "DKAudioPlayer/DKAudioPlayer/Assets/*.png"
+  s.source       = { :git => "https://github.com/wzbozon/DKAudioPlayer.git", :tag => "1.2.0" }
+  s.source_files  = 'DKAudioPlayer/*.{h,m}'
+  s.resources = "DKAudioPlayer/Assets/*.png"
   s.requires_arc = true
 end
