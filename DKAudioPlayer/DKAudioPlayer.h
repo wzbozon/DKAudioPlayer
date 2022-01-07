@@ -50,22 +50,28 @@ FOUNDATION_EXPORT const unsigned char DKAudioPlayerVersionString[];
 /**
  Creates player from NSData and puts it on a parentViewController's view automatically
  */
-- (instancetype)initWithData:(NSData *)audioData parentViewController:(UIViewController *)parentViewController;
+- (instancetype)initWithData:(NSData *)audioData
+        parentViewController:(UIViewController *)parentViewController;
 
 /**
  Creates player from NSData with a given width, but doesn't add it on a parent view automatically
  */
-- (instancetype)initWithData:(NSData *)audioData width:(CGFloat)width height:(CGFloat)height;
+- (instancetype)initWithData:(NSData *)audioData
+                       width:(CGFloat)width
+                      height:(CGFloat)height;
 
 /**
  Creates player and puts it on a parentViewController's view automatically
  */
-- (instancetype)initWithAudioFilePath:(NSString *)audioFilePath parentViewController:(UIViewController *)parentViewController;
+- (instancetype)initWithAudioFilePath:(NSString *)audioFilePath
+                 parentViewController:(UIViewController *)parentViewController;
 
 /**
  Creates player with a given width, but doesn't add it on a parent view automatically
  */
-- (instancetype)initWithAudioFilePath:(NSString *)audioFilePath width:(CGFloat)width height:(CGFloat)height;
+- (instancetype)initWithAudioFilePath:(NSString *)audioFilePath
+                                width:(CGFloat)width
+                               height:(CGFloat)height;
 
 /**
  You can programmatically play or pause audio, played in this control
