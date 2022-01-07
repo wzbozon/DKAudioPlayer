@@ -28,6 +28,8 @@
 
 @implementation DKAudioPlayer
 
+#pragma mark - Initializers
+
 - (instancetype)initWithData:(NSData *)audioData parentViewController:(UIViewController *)parentViewController
 {
     // initalize audio player from nsData
@@ -217,15 +219,7 @@
     NSAssert(error == nil, @"Audio file not found");
 }
 
-- (void)playOrPause
-{
-    if (_audioPlayer.isPlaying) {
-        [self pause];
-    }
-    else {
-        [self play];
-    }
-}
+#pragma mark - Public methods
 
 - (void)play
 {
@@ -244,9 +238,41 @@
     }
 }
 
+- (void)dismiss
+{
+    _audioPlayer = nil;
+    [self removeFromSuperview];
+}
+
+- (void)showAnimated:(BOOL)animated
+{
+    _isVisible = YES;
+
+    [self changeToVisible:_isVisible animated:animated];
+}
+
+- (void)hideAnimated:(BOOL)animated
+{
+    _isVisible = NO;
+
+    [self changeToVisible:_isVisible animated:animated];
+}
+
 - (void)setVolume:(float)volume
 {
     _audioPlayer.volume = volume;
+}
+
+#pragma mark - Private methods
+
+- (void)playOrPause
+{
+    if (_audioPlayer.isPlaying) {
+        [self pause];
+    }
+    else {
+        [self play];
+    }
 }
 
 - (void)updatePlayButtonImage
@@ -283,20 +309,6 @@
     [_audioPlayer setCurrentTime:(int)slider.value];
 }
 
-- (void)hideAnimated:(BOOL)animated
-{
-    _isVisible = NO;
-
-    [self changeToVisible:_isVisible animated:animated];
-}
-
-- (void)showAnimated:(BOOL)animated
-{
-    _isVisible = YES;
-
-    [self changeToVisible:_isVisible animated:animated];
-}
-
 - (void)changeToVisible:(BOOL)visible animated:(BOOL)animated
 {
     CGRect playerFrame = self.frame;
@@ -330,12 +342,6 @@
     else {
         self.frame = playerFrame;
     }
-}
-
-- (void)dismiss
-{
-    _audioPlayer = nil;
-    [self removeFromSuperview];
 }
 
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
