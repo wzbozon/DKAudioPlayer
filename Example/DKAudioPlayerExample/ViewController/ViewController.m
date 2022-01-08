@@ -68,12 +68,7 @@
 
 - (IBAction)showHideClicked:(id)sender
 {
-    if (self.audioPlayer.isVisible) {
-        [self.audioPlayer hideAnimated:YES];
-    }
-    else {
-        [self.audioPlayer showAnimated:YES];
-    }
+    self.audioPlayer.hidden = !self.audioPlayer.isHidden;
 }
 
 @end

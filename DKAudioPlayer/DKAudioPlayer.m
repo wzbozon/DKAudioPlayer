@@ -172,25 +172,25 @@
         [_slider addTarget:self action:@selector(sliderChanged:) forControlEvents:UIControlEventValueChanged];
         [self addSubview:_slider];
 
-        _bubbleView = [[UIView alloc] initWithFrame:CGRectMake(160, _slider.frame.origin.y - 46 + _slider.frame.size.height / 2, 72, 46)];
-        _bubbleView.backgroundColor = [UIColor clearColor];
-        _bubbleView.frame = [self createCurrentPositionFrame];
+        self.bubbleView = [[UIView alloc] initWithFrame:CGRectMake(160, _slider.frame.origin.y - 46 + _slider.frame.size.height / 2, 72, 46)];
+        self.bubbleView.backgroundColor = [UIColor clearColor];
+        self.bubbleView.frame = [self createCurrentPositionFrame];
         UIImageView *bubbleImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"player_bubble"
                                                                                      inBundle:frameworkBundle
                                                                 compatibleWithTraitCollection:nil]];
         bubbleImageView.contentMode = UIViewContentModeScaleToFill;
-        bubbleImageView.frame = _bubbleView.bounds;
-        [_bubbleView addSubview:bubbleImageView];
-        _timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 10, 72, 11)];
-        _timeLabel.backgroundColor = [UIColor clearColor];
-        _timeLabel.textColor = [UIColor blackColor];
-        _timeLabel.textAlignment = NSTextAlignmentCenter;
-        _timeLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:10];
-        _timeLabel.text = [self calculateCurrentDuration];
-        [_bubbleView addSubview:_timeLabel];
+        bubbleImageView.frame = self.bubbleView.bounds;
+        [self.bubbleView addSubview:bubbleImageView];
+        self.timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 10, 72, 11)];
+        self.timeLabel.backgroundColor = [UIColor clearColor];
+        self.timeLabel.textColor = [UIColor blackColor];
+        self.timeLabel.textAlignment = NSTextAlignmentCenter;
+        self.timeLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:10];
+        self.timeLabel.text = [self calculateCurrentDuration];
+        [self.bubbleView addSubview:self.timeLabel];
 
-        _bubbleView.hidden = YES;
-        [self addSubview:_bubbleView];
+        self.bubbleView.hidden = YES;
+        [self addSubview:self.bubbleView];
 
         self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
 
@@ -311,34 +311,23 @@
 - (void)changeToVisible:(BOOL)visible animated:(BOOL)animated
 {
     CGRect playerFrame = self.frame;
-    CGRect parentFrame = self.parentViewController.view.bounds;
-    CGFloat bottomPadding = 0;
-    if (@available(iOS 11.0, *)) {
-        UIWindow *window = [UIApplication sharedApplication].keyWindow;
-        bottomPadding = window.safeAreaInsets.bottom;
-    }
+
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    CGFloat bottomPadding = window.safeAreaInsets.bottom;
 
     if (visible) {
         playerFrame.origin.y -= (_playerHeight + bottomPadding);
-        parentFrame.size.height -= (_playerHeight + bottomPadding);
-        _bubbleView.hidden = NO;
-    }
-    else {
+        self.bubbleView.hidden = NO;
+    } else {
         playerFrame.origin.y += (_playerHeight + bottomPadding);
-        parentFrame.size.height += (_playerHeight + bottomPadding);
-        _bubbleView.hidden = YES;
+        self.bubbleView.hidden = YES;
     }
 
     if (animated) {
-        [UIView animateWithDuration:0.4 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-
+        [UIView animateWithDuration:0.4 animations:^{
             self.frame = playerFrame;
-
-        } completion:^(BOOL finished){
-
         }];
-    }
-    else {
+    } else {
         self.frame = playerFrame;
     }
 }
@@ -352,7 +341,7 @@
 {
     _isBubbleViewVisible = isBubbleViewVisible;
 
-    _bubbleView.hidden = ! isBubbleViewVisible;
+    self.bubbleView.hidden = ! isBubbleViewVisible;
 }
 
 - (NSString *)calculateCurrentDuration
