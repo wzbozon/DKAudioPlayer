@@ -1,6 +1,6 @@
 //
 //  main.m
-//  PlayerViewSample
+//  DKAudioPlayerExample
 //
 //  Created by Denis Kutlubaev on 17.01.14.
 

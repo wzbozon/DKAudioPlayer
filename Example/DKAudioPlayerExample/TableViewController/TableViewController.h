@@ -1,6 +1,6 @@
 //
 //  TableViewController.h
-//  PlayerViewSample
+//  DKAudioPlayerExample
 //
 //  Created by Denis Kutlubaev on 21.05.14.
 //
