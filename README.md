@@ -96,7 +96,7 @@ Required background modes = App plays audio or streams audio/video using AirPlay
 
 ## Author
 
-Dennis Kutlubaev, kutlubaev.denis@gmail.com
+Denis Kutlubaev, kutlubaev.denis@gmail.com
 
 ## License
 

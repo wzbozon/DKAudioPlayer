@@ -2,7 +2,7 @@
 //  DKAudioPlayerExampleTests.m
 //  DKAudioPlayerExampleTests
 //
-//  Created by Dennis Kutlubaev on 17.01.14.
+//  Created by Denis Kutlubaev on 17.01.14.
 
 #import <XCTest/XCTest.h>
 

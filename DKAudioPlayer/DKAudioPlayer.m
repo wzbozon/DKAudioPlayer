@@ -1,7 +1,7 @@
 //
 //  DKAudioPlayer.m
 //
-//  Created by Dennis Kutlubaev on 27.02.14.
+//  Created by Denis Kutlubaev on 27.02.14.
 
 #import "DKAudioPlayer.h"
 

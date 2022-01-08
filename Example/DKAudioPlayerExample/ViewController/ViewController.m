@@ -2,7 +2,7 @@
 //  ViewController.m
 //  DKAudioPlayerSample
 //
-//  Created by Dennis Kutlubaev on 17.01.14.
+//  Created by Denis Kutlubaev on 17.01.14.
 
 #import "ViewController.h"
 #import <DKAudioPlayer/DKAudioPlayer.h>

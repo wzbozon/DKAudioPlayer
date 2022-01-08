@@ -2,7 +2,7 @@
 //  AppDelegate.m
 //  PlayerViewSample
 //
-//  Created by Dennis Kutlubaev on 17.01.14.
+//  Created by Denis Kutlubaev on 17.01.14.
 
 #import "AppDelegate.h"
 #import "ViewController.h"

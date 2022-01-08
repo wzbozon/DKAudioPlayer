@@ -1,7 +1,7 @@
 //
 //  DKAudioPlayer.h
 //
-//  Created by Dennis Kutlubaev on 27.02.14.
+//  Created by Denis Kutlubaev on 27.02.14.
 
 // Add this to your *.plist file to make your audio play in background mode too:
 /*

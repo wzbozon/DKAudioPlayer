@@ -50,6 +50,13 @@
 			remoteGlobalIDString = 9277EA1F257150D0003842FD;
 			remoteInfo = DKAudioPlayerTests;
 		};
+		9282C4F42789B858006835A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 923C111A25715DA700797027 /* DKAudioPlayer.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9277EA15257150CF003842FD;
+			remoteInfo = DKAudioPlayer;
+		};
 		92E9AA13188997A500168BBD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 92E9A9E2188997A400168BBD /* Project object */;
@@ -291,6 +298,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				9282C4F52789B858006835A8 /* PBXTargetDependency */,
 			);
 			name = DKAudioPlayerExample;
 			productName = PlayerViewSample;
@@ -426,6 +434,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		9282C4F52789B858006835A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DKAudioPlayer;
+			targetProxy = 9282C4F42789B858006835A8 /* PBXContainerItemProxy */;
+		};
 		92E9AA14188997A500168BBD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 92E9A9E9188997A400168BBD /* DKAudioPlayerExample */;
