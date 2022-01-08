@@ -7,8 +7,6 @@
 
 @interface DKAudioPlayer()
 {
-    AVAudioPlayer *_audioPlayer;
-
     float _playerHeight;
     float _playerWidth;
     float _inset;
@@ -16,6 +14,7 @@
     UIButton *_playPauseButton;
 }
 
+@property (nonatomic, strong) AVAudioPlayer *audioPlayer;
 @property (nonatomic, strong) NSString *durationString;
 @property (nonatomic, strong) NSTimer *timer;
 @property (nonatomic, strong) UILabel *timeLabel;
@@ -104,14 +103,14 @@
         _inset = 15;
 
 
-        _audioPlayer.volume = 0.5;
-        _audioPlayer.delegate = self;
+        self.audioPlayer.volume = 0.5;
+        self.audioPlayer.delegate = self;
 
 
         [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
         [[AVAudioSession sharedInstance] setActive: YES error:nil];
 
-        long totalPlaybackTime = _audioPlayer.duration;
+        long totalPlaybackTime = self.audioPlayer.duration;
         int tHours = (int)(totalPlaybackTime / 3600);
         int tMins = (int)((totalPlaybackTime/60) - tHours*60);
         int tSecs = (int)(totalPlaybackTime % 60 );
@@ -169,7 +168,7 @@
                      compatibleWithTraitCollection:nil]
                       forState:UIControlStateNormal];
         _slider.minimumValue = 0.0;
-        _slider.maximumValue = _audioPlayer.duration;
+        _slider.maximumValue = self.audioPlayer.duration;
         [_slider addTarget:self action:@selector(sliderChanged:) forControlEvents:UIControlEventValueChanged];
         [self addSubview:_slider];
 
@@ -195,7 +194,7 @@
 
         self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
 
-        self.duration = _audioPlayer.duration;
+        self.duration = self.audioPlayer.duration;
     }
 
     return self;
@@ -204,7 +203,7 @@
 - (void)initAudioPlayerWithData:(NSData *)audioData
 {
     NSError *error = nil;
-    _audioPlayer = [[AVAudioPlayer alloc] initWithData:audioData error:&error];
+    self.audioPlayer = [[AVAudioPlayer alloc] initWithData:audioData error:&error];
     NSAssert(error == nil, @"Audio not found");
 }
 
@@ -215,7 +214,7 @@
 
     NSURL *url = [NSURL fileURLWithPath:audioFilePath];
     NSError *error = nil;
-    _audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
     NSAssert(error == nil, @"Audio file not found");
 }
 
@@ -223,8 +222,8 @@
 
 - (void)play
 {
-    if (! _audioPlayer.isPlaying) {
-        [_audioPlayer play];
+    if (! self.audioPlayer.isPlaying) {
+        [self.audioPlayer play];
         self.isBubbleViewVisible = YES;
         [self updatePlayButtonImage];
     }
@@ -232,15 +231,15 @@
 
 - (void)pause
 {
-    if (_audioPlayer.isPlaying) {
-        [_audioPlayer pause];
+    if (self.audioPlayer.isPlaying) {
+        [self.audioPlayer pause];
         [self updatePlayButtonImage];
     }
 }
 
 - (void)dismiss
 {
-    _audioPlayer = nil;
+    self.audioPlayer = nil;
     [self removeFromSuperview];
 }
 
@@ -260,14 +259,14 @@
 
 - (void)setVolume:(float)volume
 {
-    _audioPlayer.volume = volume;
+    self.audioPlayer.volume = volume;
 }
 
 #pragma mark - Private methods
 
 - (void)playOrPause
 {
-    if (_audioPlayer.isPlaying) {
+    if (self.audioPlayer.isPlaying) {
         [self pause];
     }
     else {
@@ -278,7 +277,7 @@
 - (void)updatePlayButtonImage
 {
     NSBundle *frameworkBundle = [NSBundle bundleForClass:[self class]];
-    NSString *imageName = _audioPlayer.isPlaying ? @"player_pause" : @"player_play";
+    NSString *imageName = self.audioPlayer.isPlaying ? @"player_pause" : @"player_play";
     [_playPauseButton setImage:[UIImage imageNamed:imageName
                                           inBundle:frameworkBundle
                      compatibleWithTraitCollection:nil]
@@ -290,7 +289,7 @@
 
     self.timeLabel.text = [self calculateCurrentDuration];
 
-    [self.slider setValue:_audioPlayer.currentTime animated:NO];
+    [self.slider setValue:self.audioPlayer.currentTime animated:NO];
     self.bubbleView.frame = [self createCurrentPositionFrame];
 }
 
@@ -306,7 +305,7 @@
 
 - (void)sliderChanged:(UISlider *)slider
 {
-    [_audioPlayer setCurrentTime:(int)slider.value];
+    [self.audioPlayer setCurrentTime:(int)slider.value];
 }
 
 - (void)changeToVisible:(BOOL)visible animated:(BOOL)animated
@@ -358,7 +357,7 @@
 
 - (NSString *)calculateCurrentDuration
 {
-    long currentPlaybackTime = _audioPlayer.currentTime;
+    long currentPlaybackTime = self.audioPlayer.currentTime;
 
     self.currentSecond = (int)currentPlaybackTime;
     

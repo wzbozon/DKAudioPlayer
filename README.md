@@ -47,15 +47,15 @@ First you create an instance of a player object:
     if ( audioFilePath ) {
         
         // The width of a player is equal to the width of a parent view
-        _audioPlayer = [[DKAudioPlayer alloc] initWithAudioFilePath:audioFilePath width:self.view.frame.size.width height:0];
+        self.audioPlayer = [[DKAudioPlayer alloc] initWithAudioFilePath:audioFilePath width:self.view.frame.size.width height:0];
         
         // Setting the origin of an audio player
-        CGRect frame = _audioPlayer.frame;
+        CGRect frame = self.audioPlayer.frame;
         frame.origin = CGPointMake(0, self.view.frame.size.height - self.tabBarController.tabBar.frame.size.height);
-        _audioPlayer.frame = frame;
+        self.audioPlayer.frame = frame;
         
         // Adding player on a view
-        [self.view addSubview:_audioPlayer];
+        [self.view addSubview:self.audioPlayer];
     }
 }
 ```
@@ -66,7 +66,7 @@ Then on some action you can just show or hide the player:
 {
     [super viewDidAppear:animated];
     
-    if (! _audioPlayer.isVisible) {
+    if (! self.audioPlayer.isVisible) {
         [self.audioPlayer showAnimated:YES];
     }
 }
@@ -74,11 +74,11 @@ Then on some action you can just show or hide the player:
 
 - (IBAction)showHideClicked:(id)sender
 {
-    if (_audioPlayer.isVisible) {
-        [_audioPlayer hideAnimated:YES];
+    if (self.audioPlayer.isVisible) {
+        [self.audioPlayer hideAnimated:YES];
     }
     else {
-        [_audioPlayer showAnimated:YES];
+        [self.audioPlayer showAnimated:YES];
     }
 }
 ```
