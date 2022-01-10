@@ -243,20 +243,6 @@
     [self removeFromSuperview];
 }
 
-- (void)showAnimated:(BOOL)animated
-{
-    _isVisible = YES;
-
-    [self changeToVisible:_isVisible animated:animated];
-}
-
-- (void)hideAnimated:(BOOL)animated
-{
-    _isVisible = NO;
-
-    [self changeToVisible:_isVisible animated:animated];
-}
-
 - (void)setVolume:(float)volume
 {
     self.audioPlayer.volume = volume;
@@ -306,30 +292,6 @@
 - (void)sliderChanged:(UISlider *)slider
 {
     [self.audioPlayer setCurrentTime:(int)slider.value];
-}
-
-- (void)changeToVisible:(BOOL)visible animated:(BOOL)animated
-{
-    CGRect playerFrame = self.frame;
-
-    UIWindow *window = [UIApplication sharedApplication].keyWindow;
-    CGFloat bottomPadding = window.safeAreaInsets.bottom;
-
-    if (visible) {
-        playerFrame.origin.y -= (_playerHeight + bottomPadding);
-        self.bubbleView.hidden = NO;
-    } else {
-        playerFrame.origin.y += (_playerHeight + bottomPadding);
-        self.bubbleView.hidden = YES;
-    }
-
-    if (animated) {
-        [UIView animateWithDuration:0.4 animations:^{
-            self.frame = playerFrame;
-        }];
-    } else {
-        self.frame = playerFrame;
-    }
 }
 
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag

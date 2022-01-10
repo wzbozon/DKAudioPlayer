@@ -12,7 +12,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [self setupAppearance];
+
     self.tabBarController = [[UITabBarController alloc] init];
+    self.tabBarController.tabBar.translucent = NO;
+    self.tabBarController.tabBar.barStyle = UIBarStyleDefault;
     ViewController *viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
     [self.tabBarController addChildViewController:viewController];
     
@@ -25,6 +29,17 @@
     [self.window makeKeyAndVisible];
     
     return YES;
+}
+
+- (void)setupAppearance {
+    UITabBarAppearance *tabBarAppearance = [UITabBarAppearance new];
+    [tabBarAppearance configureWithOpaqueBackground];
+    tabBarAppearance.backgroundColor = [UIColor whiteColor];
+    UITabBar.appearance.standardAppearance = tabBarAppearance;
+
+    if (@available(iOS 15, *)) {
+        UITabBar.appearance.scrollEdgeAppearance = tabBarAppearance;
+    }
 }
 
 @end

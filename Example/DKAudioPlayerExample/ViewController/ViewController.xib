@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController">
             <connections>
                 <outlet property="audioPlayerContainerView" destination="HZM-5K-zJC" id="XNL-I8-m4g"/>
+                <outlet property="audioPlayerContainerViewBottomConstraint" destination="F1l-hh-g6a" id="BJv-DM-mU0"/>
                 <outlet property="view" destination="iN0-l3-epB" id="gpc-Oe-myO"/>
             </connections>
         </placeholder>

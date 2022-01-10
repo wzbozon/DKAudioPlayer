@@ -11,6 +11,7 @@
 
 @property (strong, nonatomic) DKAudioPlayer *audioPlayer;
 @property (weak, nonatomic) IBOutlet UIView *audioPlayerContainerView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *audioPlayerContainerViewBottomConstraint;
 
 @end
 
@@ -47,7 +48,34 @@
 }
 
 - (IBAction)showHideButtonTapped:(id)sender {
-    self.audioPlayer.hidden = !self.audioPlayer.isHidden;
+    // You can show or hide your player as you want
+    // This is just an example
+    // When you hide it this way, the music doesn't stop
+    // If you want to stop a music, use a dismiss method or pause 
+    [UIView animateWithDuration:0.4 animations:^{
+        if (self.audioPlayerContainerViewBottomConstraint.constant != 0) {
+            self.audioPlayerContainerViewBottomConstraint.constant = 0;
+        } else {
+            CGFloat bottomInset = self.keyWindow.safeAreaInsets.bottom;
+            self.audioPlayerContainerViewBottomConstraint.constant = - (self.audioPlayerContainerView.bounds.size.height + bottomInset);
+        }
+        [self.view setNeedsLayout];
+        [self.view layoutIfNeeded];
+    }];
+}
+
+- (UIWindow *)keyWindow {
+    UIWindow *foundWindow = nil;
+    NSArray *windows = [[UIApplication sharedApplication] windows];
+
+    for (UIWindow *window in windows) {
+        if (window.isKeyWindow) {
+            foundWindow = window;
+            break;
+        }
+    }
+
+    return foundWindow;
 }
 
 @end

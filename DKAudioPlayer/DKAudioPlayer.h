@@ -89,12 +89,9 @@ FOUNDATION_EXPORT const unsigned char DKAudioPlayerVersionString[];
 - (void)dismiss;
 
 /**
- Use these methods to show or hide player
+ The audio player’s volume
+ This property supports values ranging from 0.0 for silence to 1.0 for full volume.
  */
-- (void)showAnimated:(BOOL)animated;
-
-- (void)hideAnimated:(BOOL)animated;
-
 - (void)setVolume:(float)volume;
 
 @end
