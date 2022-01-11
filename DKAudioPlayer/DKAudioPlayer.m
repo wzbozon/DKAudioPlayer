@@ -10,8 +10,6 @@
     float _playerHeight;
     float _playerWidth;
     float _inset;
-
-    UIButton *_playPauseButton;
 }
 
 @property (nonatomic, strong) AVAudioPlayer *audioPlayer;
@@ -21,6 +19,7 @@
 @property (nonatomic, strong) UIView *bubbleView;
 @property (nonatomic, strong) UISlider *slider;
 @property (nonatomic, strong) UIView *backgroundView;
+@property (nonatomic, strong) UIButton *playPauseButton;
 
 @end
 
@@ -137,19 +136,19 @@
         playerBgImageView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
         [self addSubview:playerBgImageView];
 
-        _playPauseButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        _playPauseButton.autoresizesSubviews = YES;
-        _playPauseButton.imageView.contentMode = UIViewContentModeScaleToFill;
-        [_playPauseButton setImage:[UIImage imageNamed:@"player_play"
+        self.playPauseButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        self.playPauseButton.autoresizesSubviews = YES;
+        self.playPauseButton.imageView.contentMode = UIViewContentModeScaleToFill;
+        [self.playPauseButton setImage:[UIImage imageNamed:@"player_play"
                                               inBundle:frameworkBundle
                          compatibleWithTraitCollection:nil]
                           forState:UIControlStateNormal];
-        [_playPauseButton setFrame:CGRectMake(_inset, _inset, _playerHeight - 2 * _inset, _playerHeight - 2 * _inset)];
-        [_playPauseButton addTarget:self action:@selector(playOrPause) forControlEvents:UIControlEventTouchUpInside];
-        [self addSubview:_playPauseButton];
+        [self.playPauseButton setFrame:CGRectMake(_inset, _inset, _playerHeight - 2 * _inset, _playerHeight - 2 * _inset)];
+        [self.playPauseButton addTarget:self action:@selector(playOrPause) forControlEvents:UIControlEventTouchUpInside];
+        [self addSubview:self.playPauseButton];
 
         float originY = _playerHeight / 2.0 - 34 / 2;
-        float originX = _playPauseButton.frame.origin.x + _playPauseButton.frame.size.width + _inset;
+        float originX = self.playPauseButton.frame.origin.x + self.playPauseButton.frame.size.width + _inset;
         CGRect sliderFrame = CGRectMake(originX, originY, frame.size.width - originX - _inset * 2, 34);
         _slider = [[UISlider alloc] initWithFrame:sliderFrame];
         _slider.autoresizingMask = UIViewAutoresizingFlexibleWidth;
@@ -264,7 +263,7 @@
 {
     NSBundle *frameworkBundle = [NSBundle bundleForClass:[self class]];
     NSString *imageName = self.audioPlayer.isPlaying ? @"player_pause" : @"player_play";
-    [_playPauseButton setImage:[UIImage imageNamed:imageName
+    [self.playPauseButton setImage:[UIImage imageNamed:imageName
                                           inBundle:frameworkBundle
                      compatibleWithTraitCollection:nil]
                       forState:UIControlStateNormal];
