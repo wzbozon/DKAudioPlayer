@@ -56,13 +56,8 @@
     
     if ( audioFilePath ) {
 
-        UIView *containerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, UIScreen.mainScreen.bounds.size.width, 90)];
-        self.audioPlayer = [[DKAudioPlayer alloc] initWithAudioFilePath:audioFilePath width:containerView.bounds.size.width height:75];
-        
-        // Setting the origin of an audio player
-        CGRect frame = self.audioPlayer.frame;
-        frame.origin = CGPointMake(0, 15);
-        self.audioPlayer.frame = frame;
+        UIView *containerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, UIScreen.mainScreen.bounds.size.width, 75)];
+        self.audioPlayer = [[DKAudioPlayer alloc] initWithAudioFilePath:audioFilePath frame:containerView.bounds];
         
         // TODO: here are some problems with blinking of a bubble
         self.audioPlayer.isBubbleViewVisible = YES;

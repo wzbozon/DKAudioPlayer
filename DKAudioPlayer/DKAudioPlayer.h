@@ -48,30 +48,14 @@ FOUNDATION_EXPORT const unsigned char DKAudioPlayerVersionString[];
 @property (nonatomic) BOOL isBubbleViewVisible;
 
 /**
- Creates player from NSData and puts it on a parentViewController's view automatically
+ Creates player with NSData with a given frame
  */
-- (instancetype)initWithData:(NSData *)audioData
-        parentViewController:(UIViewController *)parentViewController;
+- (instancetype)initWithData:(NSData *)audioData frame:(CGRect)frame;
 
 /**
- Creates player from NSData with a given width, but doesn't add it on a parent view automatically
+ Creates player with audio file path with a given frame
  */
-- (instancetype)initWithData:(NSData *)audioData
-                       width:(CGFloat)width
-                      height:(CGFloat)height;
-
-/**
- Creates player and puts it on a parentViewController's view automatically
- */
-- (instancetype)initWithAudioFilePath:(NSString *)audioFilePath
-                 parentViewController:(UIViewController *)parentViewController;
-
-/**
- Creates player with a given width, but doesn't add it on a parent view automatically
- */
-- (instancetype)initWithAudioFilePath:(NSString *)audioFilePath
-                                width:(CGFloat)width
-                               height:(CGFloat)height;
+- (instancetype)initWithAudioFilePath:(NSString *)audioFilePath frame:(CGRect)frame;
 
 /**
  You can programmatically play or pause audio, played in this control

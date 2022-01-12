@@ -6,11 +6,6 @@
 #import "DKAudioPlayer.h"
 
 @interface DKAudioPlayer()
-{
-    float _playerHeight;
-    float _playerWidth;
-    float _inset;
-}
 
 @property (nonatomic, strong) AVAudioPlayer *audioPlayer;
 @property (nonatomic, strong) NSString *durationString;
@@ -28,193 +23,134 @@
 
 #pragma mark - Initializers
 
-- (instancetype)initWithData:(NSData *)audioData parentViewController:(UIViewController *)parentViewController
-{
-    // initalize audio player from nsData
-    [self initAudioPlayerWithData:audioData];
-
-    // initialize DKAudio with view controller
-    self = [self initWithViewController:parentViewController];
-
-    return self;
-}
-
-- (instancetype)initWithData:(NSData *)audioData width:(CGFloat)width height:(CGFloat)height
-{
-    // initalize audio player from nsData
-    [self initAudioPlayerWithData:audioData];
-
-    // initialize DK player with width and height
-    self = [self initWithWidth:width height:height];
-
-    return self;
-}
-
-- (instancetype)initWithAudioFilePath:(NSString *)audioFilePath parentViewController:(UIViewController *)parentViewController
-{
-    // initialize audio player from NSString
-    [self initAudioPlayerWithString:audioFilePath];
-
-    // initialize DKAudio with view controller
-    self = [self initWithViewController:parentViewController];
-
-    return self;
-}
-
-- (instancetype)initWithAudioFilePath:(NSString *)audioFilePath width:(CGFloat)width height:(CGFloat)height
-{
-    // initialize audio player from NSString
-    [self initAudioPlayerWithString:audioFilePath];
-
-    // initialize DK player with width and height
-    self = [self initWithWidth:width height:height];
-
-    return self;
-}
-
-- (instancetype)initWithViewController:(UIViewController *) parentViewController
-{
-    CGRect frame = CGRectMake(0, 0, parentViewController.view.bounds.size.width, 75.0);
-
-    // initialize DK player with width and height
-    self = [self initWithWidth:frame.size.width height:frame.size.height];
-
-    frame.origin.y = parentViewController.view.bounds.size.height;
-    self.frame = frame;
-    [parentViewController.view addSubview:self];
-    [parentViewController.view bringSubviewToFront:self];
-
-    return self;
-}
-
-- (instancetype)initWithWidth:(CGFloat)width height:(CGFloat)height
-{
-    if (height == 0) height = 75.0;
-
-    CGRect frame = CGRectMake(0, 0, width, height);
-
+- (instancetype)initWithData:(NSData *)audioData frame:(CGRect)frame {
     self = [super initWithFrame:frame];
 
     if (self) {
+        NSError *error = nil;
+        self.audioPlayer = [[AVAudioPlayer alloc] initWithData:audioData error:&error];
+        NSAssert(error == nil, @"Audio not found");
 
-        _playerHeight = frame.size.height;
-        _playerWidth = frame.size.width;
-        _inset = 15;
-
-
-        self.audioPlayer.volume = 0.5;
-        self.audioPlayer.delegate = self;
-
-
-        [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
-        [[AVAudioSession sharedInstance] setActive: YES error:nil];
-
-        long totalPlaybackTime = self.audioPlayer.duration;
-        int tHours = (int)(totalPlaybackTime / 3600);
-        int tMins = (int)((totalPlaybackTime/60) - tHours*60);
-        int tSecs = (int)(totalPlaybackTime % 60 );
-        _durationString = (tHours > 0) ? [NSString stringWithFormat:@"%i:%02d:%02d", tHours, tMins, tSecs ] : [NSString stringWithFormat:@"%02d:%02d", tMins, tSecs];
-
-        _timer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(onTimer:) userInfo:nil repeats:YES];
-
-        self.clipsToBounds = NO;
-        self.autoresizesSubviews = YES;
-        self.backgroundColor = [UIColor clearColor];
-
-        self.backgroundView = [[UIView alloc] initWithFrame:self.bounds];
-        self.backgroundView.backgroundColor = [UIColor colorWithRed:232.0/255.0 green:232.0/255.0 blue:232.0/255.0 alpha:1.0];
-        self.backgroundView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-        [self addSubview:self.backgroundView];
-
-        NSBundle *frameworkBundle = [NSBundle bundleForClass:[self class]];
-
-        UIImageView *playerBgImageView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"player_player_bg"
-                                                                                        inBundle:frameworkBundle
-                                                                   compatibleWithTraitCollection:nil]
-                                                                             stretchableImageWithLeftCapWidth:5 topCapHeight:5]];
-        playerBgImageView.frame = CGRectMake(_inset, _inset, _playerWidth - _inset * 2, _playerHeight - _inset * 2);
-        playerBgImageView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-        [self addSubview:playerBgImageView];
-
-        self.playPauseButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        self.playPauseButton.autoresizesSubviews = YES;
-        self.playPauseButton.imageView.contentMode = UIViewContentModeScaleToFill;
-        [self.playPauseButton setImage:[UIImage imageNamed:@"player_play"
-                                              inBundle:frameworkBundle
-                         compatibleWithTraitCollection:nil]
-                          forState:UIControlStateNormal];
-        [self.playPauseButton setFrame:CGRectMake(_inset, _inset, _playerHeight - 2 * _inset, _playerHeight - 2 * _inset)];
-        [self.playPauseButton addTarget:self action:@selector(playOrPause) forControlEvents:UIControlEventTouchUpInside];
-        [self addSubview:self.playPauseButton];
-
-        float originY = _playerHeight / 2.0 - 34 / 2;
-        float originX = self.playPauseButton.frame.origin.x + self.playPauseButton.frame.size.width + _inset;
-        CGRect sliderFrame = CGRectMake(originX, originY, frame.size.width - originX - _inset * 2, 34);
-        _slider = [[UISlider alloc] initWithFrame:sliderFrame];
-        _slider.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-        [_slider setMaximumTrackImage:[[UIImage imageNamed:@"player_progress_bg"
-                                                  inBundle:frameworkBundle
-                             compatibleWithTraitCollection:nil]
-                                       resizableImageWithCapInsets:UIEdgeInsetsMake(0, 10, 0, 10)]
-                             forState:UIControlStateNormal];
-        [_slider setMinimumTrackImage:[[UIImage imageNamed:@"player_progress_blue"
-                                                  inBundle:frameworkBundle
-                             compatibleWithTraitCollection:nil]
-                                       resizableImageWithCapInsets:UIEdgeInsetsMake(0, 10, 0, 10)]
-                             forState:UIControlStateNormal];
-        [_slider setThumbImage:[UIImage imageNamed:@"player_circle"
-                                          inBundle:frameworkBundle
-                     compatibleWithTraitCollection:nil]
-                      forState:UIControlStateNormal];
-        _slider.minimumValue = 0.0;
-        _slider.maximumValue = self.audioPlayer.duration;
-        [_slider addTarget:self action:@selector(sliderChanged:) forControlEvents:UIControlEventValueChanged];
-        [self addSubview:_slider];
-
-        self.bubbleView = [[UIView alloc] initWithFrame:CGRectMake(160, _slider.frame.origin.y - 46 + _slider.frame.size.height / 2, 72, 46)];
-        self.bubbleView.backgroundColor = [UIColor clearColor];
-        self.bubbleView.frame = [self createCurrentPositionFrame];
-        UIImageView *bubbleImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"player_bubble"
-                                                                                     inBundle:frameworkBundle
-                                                                compatibleWithTraitCollection:nil]];
-        bubbleImageView.contentMode = UIViewContentModeScaleToFill;
-        bubbleImageView.frame = self.bubbleView.bounds;
-        [self.bubbleView addSubview:bubbleImageView];
-        self.timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 10, 72, 11)];
-        self.timeLabel.backgroundColor = [UIColor clearColor];
-        self.timeLabel.textColor = [UIColor blackColor];
-        self.timeLabel.textAlignment = NSTextAlignmentCenter;
-        self.timeLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:10];
-        self.timeLabel.text = [self calculateCurrentDuration];
-        [self.bubbleView addSubview:self.timeLabel];
-
-        self.bubbleView.hidden = YES;
-        [self addSubview:self.bubbleView];
-
-        self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
-
-        self.duration = self.audioPlayer.duration;
+        [self commonSetup];
     }
 
     return self;
 }
 
-- (void)initAudioPlayerWithData:(NSData *)audioData
-{
-    NSError *error = nil;
-    self.audioPlayer = [[AVAudioPlayer alloc] initWithData:audioData error:&error];
-    NSAssert(error == nil, @"Audio not found");
+- (instancetype)initWithAudioFilePath:(NSString *)audioFilePath frame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+
+    if (self) {
+        _audioFilePath = audioFilePath;
+        NSAssert(audioFilePath != nil, @"Audio file path cannot be nil");
+
+        NSURL *url = [NSURL fileURLWithPath:audioFilePath];
+        NSError *error = nil;
+        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+        NSAssert(error == nil, @"Audio file not found");
+
+        [self commonSetup];
+    }
+
+    return self;
 }
 
-- (void)initAudioPlayerWithString:(NSString *)audioFilePath
-{
-    _audioFilePath = audioFilePath;
-    NSAssert(audioFilePath != nil, @"Audio file path cannot be nil");
+- (void)commonSetup {
+    CGFloat playerHeight = self.frame.size.height;
+    CGFloat playerWidth = self.frame.size.width;
+    CGFloat inset = 15;
 
-    NSURL *url = [NSURL fileURLWithPath:audioFilePath];
-    NSError *error = nil;
-    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
-    NSAssert(error == nil, @"Audio file not found");
+    self.audioPlayer.volume = 0.5;
+    self.audioPlayer.delegate = self;
+
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
+    [[AVAudioSession sharedInstance] setActive: YES error:nil];
+
+    long totalPlaybackTime = self.audioPlayer.duration;
+    int tHours = (int)(totalPlaybackTime / 3600);
+    int tMins = (int)((totalPlaybackTime/60) - tHours*60);
+    int tSecs = (int)(totalPlaybackTime % 60 );
+    _durationString = (tHours > 0) ? [NSString stringWithFormat:@"%i:%02d:%02d", tHours, tMins, tSecs ] : [NSString stringWithFormat:@"%02d:%02d", tMins, tSecs];
+
+    _timer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(onTimer:) userInfo:nil repeats:YES];
+
+    self.clipsToBounds = NO;
+    self.autoresizesSubviews = YES;
+    self.backgroundColor = [UIColor clearColor];
+
+    self.backgroundView = [[UIView alloc] initWithFrame:self.bounds];
+    self.backgroundView.backgroundColor = [UIColor colorWithRed:232.0/255.0 green:232.0/255.0 blue:232.0/255.0 alpha:1.0];
+    self.backgroundView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+    [self addSubview:self.backgroundView];
+
+    NSBundle *frameworkBundle = [NSBundle bundleForClass:[self class]];
+
+    UIImageView *playerBgImageView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"player_player_bg"
+                                                                                    inBundle:frameworkBundle
+                                                               compatibleWithTraitCollection:nil]
+                                                                         stretchableImageWithLeftCapWidth:5 topCapHeight:5]];
+    playerBgImageView.frame = CGRectMake(inset, inset, playerWidth - inset * 2, playerHeight - inset * 2);
+    playerBgImageView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+    [self addSubview:playerBgImageView];
+
+    self.playPauseButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.playPauseButton.autoresizesSubviews = YES;
+    self.playPauseButton.imageView.contentMode = UIViewContentModeScaleToFill;
+    [self.playPauseButton setImage:[UIImage imageNamed:@"player_play"
+                                              inBundle:frameworkBundle
+                         compatibleWithTraitCollection:nil]
+                          forState:UIControlStateNormal];
+    [self.playPauseButton setFrame:CGRectMake(inset, inset, playerHeight - 2 * inset, playerHeight - 2 * inset)];
+    [self.playPauseButton addTarget:self action:@selector(playOrPause) forControlEvents:UIControlEventTouchUpInside];
+    [self addSubview:self.playPauseButton];
+
+    float originY = playerHeight / 2.0 - 34 / 2;
+    float originX = self.playPauseButton.frame.origin.x + self.playPauseButton.frame.size.width + inset;
+    CGRect sliderFrame = CGRectMake(originX, originY, self.frame.size.width - originX - inset * 2, 34);
+    _slider = [[UISlider alloc] initWithFrame:sliderFrame];
+    _slider.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+    [_slider setMaximumTrackImage:[[UIImage imageNamed:@"player_progress_bg"
+                                              inBundle:frameworkBundle
+                         compatibleWithTraitCollection:nil]
+                                   resizableImageWithCapInsets:UIEdgeInsetsMake(0, 10, 0, 10)]
+                         forState:UIControlStateNormal];
+    [_slider setMinimumTrackImage:[[UIImage imageNamed:@"player_progress_blue"
+                                              inBundle:frameworkBundle
+                         compatibleWithTraitCollection:nil]
+                                   resizableImageWithCapInsets:UIEdgeInsetsMake(0, 10, 0, 10)]
+                         forState:UIControlStateNormal];
+    [_slider setThumbImage:[UIImage imageNamed:@"player_circle"
+                                      inBundle:frameworkBundle
+                 compatibleWithTraitCollection:nil]
+                  forState:UIControlStateNormal];
+    _slider.minimumValue = 0.0;
+    _slider.maximumValue = self.audioPlayer.duration;
+    [_slider addTarget:self action:@selector(sliderChanged:) forControlEvents:UIControlEventValueChanged];
+    [self addSubview:_slider];
+
+    self.bubbleView = [[UIView alloc] initWithFrame:CGRectMake(160, _slider.frame.origin.y - 46 + _slider.frame.size.height / 2, 72, 46)];
+    self.bubbleView.backgroundColor = [UIColor clearColor];
+    self.bubbleView.frame = [self createCurrentPositionFrame];
+    UIImageView *bubbleImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"player_bubble"
+                                                                                 inBundle:frameworkBundle
+                                                            compatibleWithTraitCollection:nil]];
+    bubbleImageView.contentMode = UIViewContentModeScaleToFill;
+    bubbleImageView.frame = self.bubbleView.bounds;
+    [self.bubbleView addSubview:bubbleImageView];
+    self.timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 10, 72, 11)];
+    self.timeLabel.backgroundColor = [UIColor clearColor];
+    self.timeLabel.textColor = [UIColor blackColor];
+    self.timeLabel.textAlignment = NSTextAlignmentCenter;
+    self.timeLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:10];
+    self.timeLabel.text = [self calculateCurrentDuration];
+    [self.bubbleView addSubview:self.timeLabel];
+
+    self.bubbleView.hidden = YES;
+    [self addSubview:self.bubbleView];
+
+    self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
+
+    self.duration = self.audioPlayer.duration;
 }
 
 #pragma mark - Public methods
@@ -238,6 +174,7 @@
 
 - (void)dismiss
 {
+    [self.audioPlayer pause];
     self.audioPlayer = nil;
     [self removeFromSuperview];
 }

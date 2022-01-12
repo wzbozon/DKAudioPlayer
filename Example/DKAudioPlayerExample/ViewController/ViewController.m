@@ -36,8 +36,7 @@
 
     // The width of a player is equal to the width of a parent view
     self.audioPlayer = [[DKAudioPlayer alloc] initWithAudioFilePath:audioFilePath
-                                                              width:self.audioPlayerContainerView.frame.size.width
-                                                             height:self.audioPlayerContainerView.frame.size.height];
+                                                              frame:self.audioPlayerContainerView.frame];
 
     // You can set any background color to the background view of the player
     // self.audioPlayer.backgroundViewColor = [UIColor clearColor];
