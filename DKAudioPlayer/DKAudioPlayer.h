@@ -33,7 +33,6 @@ FOUNDATION_EXPORT const unsigned char DKAudioPlayerVersionString[];
 @interface DKAudioPlayer : UIView <AVAudioPlayerDelegate>
 
 @property (nonatomic, weak) id <DKAudioPlayerDelegate> delegate;
-@property (nonatomic, strong) NSString *audioFilePath;
 @property (nonatomic, strong) UIViewController *parentViewController;
 @property (nonatomic) BOOL isVisible;
 @property (nonatomic, strong) UIColor *backgroundViewColor;

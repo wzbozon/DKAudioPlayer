@@ -41,7 +41,6 @@
     self = [super initWithFrame:frame];
 
     if (self) {
-        _audioFilePath = audioFilePath;
         NSAssert(audioFilePath != nil, @"Audio file path cannot be nil");
 
         NSURL *url = [NSURL fileURLWithPath:audioFilePath];
