@@ -7,7 +7,7 @@
 //
 
 #import "TableViewController.h"
-#import <DKAudioPlayer/DKAudioPlayer.h>
+@import DKAudioPlayer;
 
 @interface TableViewController ()
 
@@ -57,10 +57,7 @@
     if ( audioFilePath ) {
 
         UIView *containerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, UIScreen.mainScreen.bounds.size.width, 75)];
-        self.audioPlayer = [[DKAudioPlayer alloc] initWithAudioFilePath:audioFilePath frame:containerView.bounds];
-        
-        // TODO: here are some problems with blinking of a bubble
-        self.audioPlayer.isBubbleViewVisible = YES;
+        self.audioPlayer = [[DKAudioPlayer alloc] initWithAudioFilePath:audioFilePath];
 
         containerView.backgroundColor = [UIColor colorWithRed:232.0/255.0 green:232.0/255.0 blue:232.0/255.0 alpha:1.0];
         [containerView addSubview:self.audioPlayer];

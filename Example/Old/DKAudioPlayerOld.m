@@ -1,11 +1,11 @@
 //
-//  DKAudioPlayer.m
+//  DKAudioPlayerOld.m
 //
 //  Created by Denis Kutlubaev on 27.02.14.
 
-#import "DKAudioPlayer.h"
+#import "DKAudioPlayerOld.h"
 
-@interface DKAudioPlayer()
+@interface DKAudioPlayerOld()
 
 @property (nonatomic, strong) AVAudioPlayer *audioPlayer;
 @property (nonatomic, strong) NSString *durationString;
@@ -19,7 +19,7 @@
 @end
 
 
-@implementation DKAudioPlayer
+@implementation DKAudioPlayerOld
 
 #pragma mark - Initializers
 
@@ -64,12 +64,6 @@
 
     [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
     [[AVAudioSession sharedInstance] setActive: YES error:nil];
-
-    long totalPlaybackTime = self.audioPlayer.duration;
-    int tHours = (int)(totalPlaybackTime / 3600);
-    int tMins = (int)((totalPlaybackTime/60) - tHours*60);
-    int tSecs = (int)(totalPlaybackTime % 60 );
-    _durationString = (tHours > 0) ? [NSString stringWithFormat:@"%i:%02d:%02d", tHours, tMins, tSecs ] : [NSString stringWithFormat:@"%02d:%02d", tMins, tSecs];
 
     _timer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(onTimer:) userInfo:nil repeats:YES];
 

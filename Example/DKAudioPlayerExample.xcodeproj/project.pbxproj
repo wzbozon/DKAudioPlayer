@@ -3,12 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		924FFEEA278E1C06001883BE /* DKAudioPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 923C112225715DA700797027 /* DKAudioPlayer.framework */; };
-		924FFEEB278E1C06001883BE /* DKAudioPlayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 923C112225715DA700797027 /* DKAudioPlayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		929C02DF28F0B3200021B3BF /* DKAudioPlayer in Frameworks */ = {isa = PBXBuildFile; productRef = 929C02DE28F0B3200021B3BF /* DKAudioPlayer */; };
 		92BE76AE24D325A500A0EF2E /* sample.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 92BE769424D325A500A0EF2E /* sample.mp3 */; };
 		92BE76AF24D325A500A0EF2E /* sample2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 92BE769524D325A500A0EF2E /* sample2.mp3 */; };
 		92BE76B024D325A500A0EF2E /* sample1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 92BE769624D325A500A0EF2E /* sample1.mp3 */; };
@@ -19,7 +18,6 @@
 		92BE76B624D325A500A0EF2E /* 42-photos.png in Resources */ = {isa = PBXBuildFile; fileRef = 92BE76A024D325A500A0EF2E /* 42-photos.png */; };
 		92BE76B724D325A500A0EF2E /* 259-list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92BE76A124D325A500A0EF2E /* 259-list@2x.png */; };
 		92BE76B824D325A500A0EF2E /* 42-photos@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92BE76A224D325A500A0EF2E /* 42-photos@2x.png */; };
-		92BE76B924D325A500A0EF2E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92BE76A324D325A500A0EF2E /* Images.xcassets */; };
 		92BE76BA24D325A500A0EF2E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92BE76A624D325A500A0EF2E /* AppDelegate.m */; };
 		92BE76BB24D325A500A0EF2E /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92BE76A824D325A500A0EF2E /* ViewController.xib */; };
 		92BE76BC24D325A500A0EF2E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92BE76A924D325A500A0EF2E /* ViewController.m */; };
@@ -32,33 +30,9 @@
 		92E9AA12188997A500168BBD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E9A9F1188997A400168BBD /* UIKit.framework */; };
 		92E9AA1A188997A500168BBD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 92E9AA18188997A500168BBD /* InfoPlist.strings */; };
 		92E9AA1C188997A500168BBD /* DKAudioPlayerExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E9AA1B188997A500168BBD /* DKAudioPlayerExampleTests.m */; };
-		F80754FF1FD0034A00E8CEDC /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F80754FE1FD0034A00E8CEDC /* README.md */; };
-		F80755011FD003EB00E8CEDC /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F80755001FD003EB00E8CEDC /* LICENSE */; };
-		F80755041FD0044200E8CEDC /* DKAudioPlayer.podspec in Resources */ = {isa = PBXBuildFile; fileRef = F80755031FD0044200E8CEDC /* DKAudioPlayer.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		923C112125715DA700797027 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 923C111A25715DA700797027 /* DKAudioPlayer.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9277EA16257150CF003842FD;
-			remoteInfo = DKAudioPlayer;
-		};
-		923C112325715DA700797027 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 923C111A25715DA700797027 /* DKAudioPlayer.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9277EA1F257150D0003842FD;
-			remoteInfo = DKAudioPlayerTests;
-		};
-		9282C4F42789B858006835A8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 923C111A25715DA700797027 /* DKAudioPlayer.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 9277EA15257150CF003842FD;
-			remoteInfo = DKAudioPlayer;
-		};
 		92E9AA13188997A500168BBD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 92E9A9E2188997A400168BBD /* Project object */;
@@ -75,7 +49,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				924FFEEB278E1C06001883BE /* DKAudioPlayer.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -83,7 +56,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		923C111A25715DA700797027 /* DKAudioPlayer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DKAudioPlayer.xcodeproj; path = ../DKAudioPlayer.xcodeproj; sourceTree = "<group>"; };
+		92BACEE628F0ACB700443679 /* DKAudioPlayerOld.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKAudioPlayerOld.h; sourceTree = "<group>"; };
+		92BACEE728F0ACB700443679 /* DKAudioPlayer.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = DKAudioPlayer.podspec; sourceTree = "<group>"; };
+		92BACEE828F0ACB700443679 /* DKAudioPlayerOld.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKAudioPlayerOld.m; sourceTree = "<group>"; };
+		92BACEE928F0ACB700443679 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92BACEEA28F0B13800443679 /* DKAudioPlayer */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = DKAudioPlayer; path = ../DKAudioPlayer; sourceTree = "<group>"; };
 		92BE769424D325A500A0EF2E /* sample.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sample.mp3; sourceTree = "<group>"; };
 		92BE769524D325A500A0EF2E /* sample2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sample2.mp3; sourceTree = "<group>"; };
 		92BE769624D325A500A0EF2E /* sample1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sample1.mp3; sourceTree = "<group>"; };
@@ -96,7 +73,6 @@
 		92BE76A024D325A500A0EF2E /* 42-photos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "42-photos.png"; sourceTree = "<group>"; };
 		92BE76A124D325A500A0EF2E /* 259-list@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "259-list@2x.png"; sourceTree = "<group>"; };
 		92BE76A224D325A500A0EF2E /* 42-photos@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "42-photos@2x.png"; sourceTree = "<group>"; };
-		92BE76A324D325A500A0EF2E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		92BE76A524D325A500A0EF2E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		92BE76A624D325A500A0EF2E /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		92BE76A824D325A500A0EF2E /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
@@ -113,9 +89,6 @@
 		92E9AA17188997A500168BBD /* DKAudioPlayerExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DKAudioPlayerExampleTests-Info.plist"; sourceTree = "<group>"; };
 		92E9AA19188997A500168BBD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		92E9AA1B188997A500168BBD /* DKAudioPlayerExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKAudioPlayerExampleTests.m; sourceTree = "<group>"; };
-		F80754FE1FD0034A00E8CEDC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		F80755001FD003EB00E8CEDC /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		F80755031FD0044200E8CEDC /* DKAudioPlayer.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = DKAudioPlayer.podspec; path = ../DKAudioPlayer.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,9 +97,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				92E9A9F0188997A400168BBD /* CoreGraphics.framework in Frameworks */,
-				924FFEEA278E1C06001883BE /* DKAudioPlayer.framework in Frameworks */,
 				92E9A9F2188997A400168BBD /* UIKit.framework in Frameworks */,
 				92E9A9EE188997A400168BBD /* Foundation.framework in Frameworks */,
+				929C02DF28F0B3200021B3BF /* DKAudioPlayer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,13 +116,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		923C111B25715DA700797027 /* Products */ = {
+		92BACEE028F0A35500443679 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				923C112225715DA700797027 /* DKAudioPlayer.framework */,
-				923C112425715DA700797027 /* DKAudioPlayerTests.xctest */,
+				92BACEEA28F0B13800443679 /* DKAudioPlayer */,
 			);
-			name = Products;
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		92BACEE528F0ACB700443679 /* Old */ = {
+			isa = PBXGroup;
+			children = (
+				92BACEE628F0ACB700443679 /* DKAudioPlayerOld.h */,
+				92BACEE728F0ACB700443679 /* DKAudioPlayer.podspec */,
+				92BACEE828F0ACB700443679 /* DKAudioPlayerOld.m */,
+				92BACEE928F0ACB700443679 /* Info.plist */,
+			);
+			path = Old;
 			sourceTree = "<group>";
 		};
 		92BE769224D325A500A0EF2E /* DKAudioPlayerExample */ = {
@@ -158,7 +141,6 @@
 				92BE769324D325A500A0EF2E /* Sounds */,
 				92BE769724D325A500A0EF2E /* Supporting Files */,
 				92BE769E24D325A500A0EF2E /* Icons */,
-				92BE76A324D325A500A0EF2E /* Images.xcassets */,
 				92BE76A424D325A500A0EF2E /* AppDelegate */,
 				92BE76A724D325A500A0EF2E /* ViewController */,
 				92BE76AB24D325A500A0EF2E /* TableViewController */,
@@ -230,9 +212,9 @@
 		92E9A9E1188997A400168BBD = {
 			isa = PBXGroup;
 			children = (
-				923C111A25715DA700797027 /* DKAudioPlayer.xcodeproj */,
+				92BACEE528F0ACB700443679 /* Old */,
+				92BACEE028F0A35500443679 /* Packages */,
 				92BE769224D325A500A0EF2E /* DKAudioPlayerExample */,
-				F80755021FD0043200E8CEDC /* Podspec Metadata */,
 				92E9AA15188997A500168BBD /* DKAudioPlayerExampleTests */,
 				92E9A9EC188997A400168BBD /* Frameworks */,
 				92E9A9EB188997A400168BBD /* Products */,
@@ -277,16 +259,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F80755021FD0043200E8CEDC /* Podspec Metadata */ = {
-			isa = PBXGroup;
-			children = (
-				F80755031FD0044200E8CEDC /* DKAudioPlayer.podspec */,
-				F80755001FD003EB00E8CEDC /* LICENSE */,
-				F80754FE1FD0034A00E8CEDC /* README.md */,
-			);
-			name = "Podspec Metadata";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -302,9 +274,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				9282C4F52789B858006835A8 /* PBXTargetDependency */,
 			);
 			name = DKAudioPlayerExample;
+			packageProductDependencies = (
+				929C02DE28F0B3200021B3BF /* DKAudioPlayer */,
+			);
 			productName = PlayerViewSample;
 			productReference = 92E9A9EA188997A400168BBD /* DKAudioPlayerExample.app */;
 			productType = "com.apple.product-type.application";
@@ -355,12 +329,6 @@
 			mainGroup = 92E9A9E1188997A400168BBD;
 			productRefGroup = 92E9A9EB188997A400168BBD /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 923C111B25715DA700797027 /* Products */;
-					ProjectRef = 923C111A25715DA700797027 /* DKAudioPlayer.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				92E9A9E9188997A400168BBD /* DKAudioPlayerExample */,
@@ -369,40 +337,19 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXReferenceProxy section */
-		923C112225715DA700797027 /* DKAudioPlayer.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = DKAudioPlayer.framework;
-			remoteRef = 923C112125715DA700797027 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		923C112425715DA700797027 /* DKAudioPlayerTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = DKAudioPlayerTests.xctest;
-			remoteRef = 923C112325715DA700797027 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
-
 /* Begin PBXResourcesBuildPhase section */
 		92E9A9E8188997A400168BBD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F80755041FD0044200E8CEDC /* DKAudioPlayer.podspec in Resources */,
 				92BE76B724D325A500A0EF2E /* 259-list@2x.png in Resources */,
 				92BE76B124D325A500A0EF2E /* InfoPlist.strings in Resources */,
-				F80755011FD003EB00E8CEDC /* LICENSE in Resources */,
 				92BE76B024D325A500A0EF2E /* sample1.mp3 in Resources */,
 				92BE76B224D325A500A0EF2E /* LaunchScreen.xib in Resources */,
 				92BE76AF24D325A500A0EF2E /* sample2.mp3 in Resources */,
 				92BE76B524D325A500A0EF2E /* 259-list.png in Resources */,
 				92BE76AE24D325A500A0EF2E /* sample.mp3 in Resources */,
-				92BE76B924D325A500A0EF2E /* Images.xcassets in Resources */,
 				92BE76BB24D325A500A0EF2E /* ViewController.xib in Resources */,
-				F80754FF1FD0034A00E8CEDC /* README.md in Resources */,
 				92BE76B824D325A500A0EF2E /* 42-photos@2x.png in Resources */,
 				92BE76B624D325A500A0EF2E /* 42-photos.png in Resources */,
 			);
@@ -441,11 +388,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		9282C4F52789B858006835A8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = DKAudioPlayer;
-			targetProxy = 9282C4F42789B858006835A8 /* PBXContainerItemProxy */;
-		};
 		92E9AA14188997A500168BBD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 92E9A9E9188997A400168BBD /* DKAudioPlayerExample */;
@@ -588,7 +530,10 @@
 				GCC_PREFIX_HEADER = "DKAudioPlayerExample/Supporting Files/DKAudioPlayerExample-Prefix.pch";
 				INFOPLIST_FILE = "DKAudioPlayerExample/Supporting Files/DKAudioPlayerExample-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MARKETING_VERSION = 3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alwawee.DKAudioPlayerExample;
 				PRODUCT_NAME = DKAudioPlayerExample;
@@ -606,7 +551,10 @@
 				GCC_PREFIX_HEADER = "DKAudioPlayerExample/Supporting Files/DKAudioPlayerExample-Prefix.pch";
 				INFOPLIST_FILE = "DKAudioPlayerExample/Supporting Files/DKAudioPlayerExample-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MARKETING_VERSION = 3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alwawee.DKAudioPlayerExample;
 				PRODUCT_NAME = DKAudioPlayerExample;
@@ -685,6 +633,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		929C02DE28F0B3200021B3BF /* DKAudioPlayer */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DKAudioPlayer;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 92E9A9E2188997A400168BBD /* Project object */;
 }

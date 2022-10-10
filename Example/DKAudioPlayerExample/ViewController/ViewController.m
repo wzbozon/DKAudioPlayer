@@ -5,7 +5,7 @@
 //  Created by Denis Kutlubaev on 17.01.14.
 
 #import "ViewController.h"
-#import <DKAudioPlayer/DKAudioPlayer.h>
+@import DKAudioPlayer;
 
 @interface ViewController ()
 
@@ -31,19 +31,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self setupAudioPlayer];
+}
+
+- (void)setupAudioPlayer {
     NSString *audioFilePath = [[NSBundle mainBundle] pathForResource:@"sample.mp3" ofType:nil];
     if (!audioFilePath) { return; }
 
-    // The width of a player is equal to the width of a parent view
-    self.audioPlayer = [[DKAudioPlayer alloc] initWithAudioFilePath:audioFilePath
-                                                              frame:self.audioPlayerContainerView.frame];
-
-    // You can set any background color to the background view of the player
-    // self.audioPlayer.backgroundViewColor = [UIColor clearColor];
-
-    // Adding player on a view
-    self.audioPlayer.frame = self.audioPlayerContainerView.bounds;
+    self.audioPlayer = [[DKAudioPlayer alloc] initWithAudioFilePath:audioFilePath];
     [self.audioPlayerContainerView addSubview:self.audioPlayer];
+    self.audioPlayer.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.audioPlayerContainerView addConstraints:@[
+        [self.audioPlayer.leadingAnchor constraintEqualToAnchor:self.audioPlayerContainerView.leadingAnchor],
+        [self.audioPlayer.trailingAnchor constraintEqualToAnchor:self.audioPlayerContainerView.trailingAnchor],
+        [self.audioPlayer.bottomAnchor constraintEqualToAnchor:self.audioPlayerContainerView.bottomAnchor],
+        [self.audioPlayer.topAnchor constraintEqualToAnchor:self.audioPlayerContainerView.topAnchor]
+    ]];
 }
 
 - (IBAction)showHideButtonTapped:(id)sender {

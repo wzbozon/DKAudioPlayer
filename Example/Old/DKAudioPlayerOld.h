@@ -1,5 +1,5 @@
 //
-//  DKAudioPlayer.h
+//  DKAudioPlayerOld.h
 //
 //  Created by Denis Kutlubaev on 27.02.14.
 
@@ -23,16 +23,16 @@ FOUNDATION_EXPORT const unsigned char DKAudioPlayerVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <DKAudioPlayer/PublicHeader.h>
 
-@class DKAudioPlayer;
-@protocol DKAudioPlayerDelegate <NSObject>
+@class DKAudioPlayerOld;
+@protocol DKAudioPlayerOldDelegate <NSObject>
 
-- (void)didUpdatePlaybackTimeAudioPlayer:(DKAudioPlayer *)audioPlayer;
+- (void)didUpdatePlaybackTimeAudioPlayer:(DKAudioPlayerOld *)audioPlayer;
 
 @end
 
-@interface DKAudioPlayer : UIView <AVAudioPlayerDelegate>
+@interface DKAudioPlayerOld : UIView <AVAudioPlayerDelegate>
 
-@property (nonatomic, weak) id <DKAudioPlayerDelegate> delegate;
+@property (nonatomic, weak) id <DKAudioPlayerOldDelegate> delegate;
 @property (nonatomic, strong) UIViewController *parentViewController;
 @property (nonatomic) BOOL isVisible;
 @property (nonatomic, strong) UIColor *backgroundViewColor;
