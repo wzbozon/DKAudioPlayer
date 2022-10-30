@@ -293,15 +293,21 @@ private extension DKAudioPlayer {
 
         viewModel.currentTime.sink { [unowned self] currentTime in
             self.slider.setValue(Float(currentTime), animated: false)
-            self.bubbleViewLeadingConstraint.constant = xPositionFromSliderValue(self.slider) - self.bubbleView.bounds.size.width / 2
-            self.bubbleView.setNeedsLayout()
-            self.bubbleView.layoutIfNeeded()
+
+            if self.bubbleView.bounds.size.width > 0 {
+                self.bubbleViewLeadingConstraint.constant = xPositionFromSliderValue(self.slider) - self.bubbleView.bounds.size.width / 2
+                self.bubbleView.setNeedsLayout()
+                self.bubbleView.layoutIfNeeded()
+                self.bubbleView.isHidden = false
+            } else {
+                self.bubbleView.isHidden = true
+            }
         }
         .store(in: &disposeBag)
 
         viewModel.currentTimeText.sink { [unowned self] currentTimeText in
             self.bubbleTimeLabel.text = currentTimeText
-            self.bubbleView.isHidden = currentTimeText.isEmpty
+            self.bubbleView.isHidden = currentTimeText.isEmpty || self.bubbleView.bounds.size.width == 0
         }
         .store(in: &disposeBag)
     }
