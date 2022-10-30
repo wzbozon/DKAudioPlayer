@@ -9,8 +9,6 @@ import AVFoundation
 import Combine
 import UIKit
 
-// TODO: Add tests for ViewModel
-
 protocol DKAudioPlayerDelegate: AnyObject {
 
     /// Called when audio player updates a playback time
@@ -207,6 +205,8 @@ private extension DKAudioPlayer {
     }
 
     func setupUI() {
+        translatesAutoresizingMaskIntoConstraints = false
+
         addSubview(playerBgImageView)
         addSubview(playPauseButton)
         addSubview(slider)
