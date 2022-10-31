@@ -53,11 +53,20 @@
 - (void)setAudioPlayerForFileName:(NSString *)fileName
 {
     NSString *audioFilePath = [[NSBundle mainBundle] pathForResource:fileName ofType:nil];
+    if (!audioFilePath) { return; }
     
     if ( audioFilePath ) {
 
         UIView *containerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, UIScreen.mainScreen.bounds.size.width, 75)];
         self.audioPlayer = [[DKAudioPlayer alloc] initWithAudioFilePath:audioFilePath];
+        self.audioPlayer.translatesAutoresizingMaskIntoConstraints = NO;
+        
+        [containerView addConstraints:@[
+            [self.audioPlayer.leadingAnchor constraintEqualToAnchor:containerView.leadingAnchor],
+            [self.audioPlayer.trailingAnchor constraintEqualToAnchor:containerView.trailingAnchor],
+            [self.audioPlayer.bottomAnchor constraintEqualToAnchor:containerView.bottomAnchor],
+            [self.audioPlayer.topAnchor constraintEqualToAnchor:containerView.topAnchor]
+        ]];
 
         containerView.backgroundColor = [UIColor colorWithRed:232.0/255.0 green:232.0/255.0 blue:232.0/255.0 alpha:1.0];
         [containerView addSubview:self.audioPlayer];
@@ -66,7 +75,6 @@
         self.tableView.tableHeaderView = containerView;
     }
 }
-
 
 #pragma mark - Table view data source
 
