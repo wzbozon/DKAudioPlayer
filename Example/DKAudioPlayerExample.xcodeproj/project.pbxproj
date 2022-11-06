@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9283E7302917C6A7008C13DB /* AudioTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9283E72F2917C6A7008C13DB /* AudioTableViewController.swift */; };
 		929C02DF28F0B3200021B3BF /* DKAudioPlayer in Frameworks */ = {isa = PBXBuildFile; productRef = 929C02DE28F0B3200021B3BF /* DKAudioPlayer */; };
 		92BE76AE24D325A500A0EF2E /* sample.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 92BE769424D325A500A0EF2E /* sample.mp3 */; };
 		92BE76AF24D325A500A0EF2E /* sample2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 92BE769524D325A500A0EF2E /* sample2.mp3 */; };
@@ -21,7 +22,6 @@
 		92BE76BA24D325A500A0EF2E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92BE76A624D325A500A0EF2E /* AppDelegate.m */; };
 		92BE76BB24D325A500A0EF2E /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92BE76A824D325A500A0EF2E /* ViewController.xib */; };
 		92BE76BC24D325A500A0EF2E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92BE76A924D325A500A0EF2E /* ViewController.m */; };
-		92BE76BD24D325A500A0EF2E /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92BE76AD24D325A500A0EF2E /* TableViewController.m */; };
 		92E9A9EE188997A400168BBD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E9A9ED188997A400168BBD /* Foundation.framework */; };
 		92E9A9F0188997A400168BBD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E9A9EF188997A400168BBD /* CoreGraphics.framework */; };
 		92E9A9F2188997A400168BBD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E9A9F1188997A400168BBD /* UIKit.framework */; };
@@ -56,6 +56,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9283E72E2917C6A7008C13DB /* DKAudioPlayerExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DKAudioPlayerExample-Bridging-Header.h"; sourceTree = "<group>"; };
+		9283E72F2917C6A7008C13DB /* AudioTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioTableViewController.swift; sourceTree = "<group>"; };
 		92BACEE628F0ACB700443679 /* DKAudioPlayerOld.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKAudioPlayerOld.h; sourceTree = "<group>"; };
 		92BACEE728F0ACB700443679 /* DKAudioPlayer.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = DKAudioPlayer.podspec; sourceTree = "<group>"; };
 		92BACEE828F0ACB700443679 /* DKAudioPlayerOld.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKAudioPlayerOld.m; sourceTree = "<group>"; };
@@ -78,8 +80,6 @@
 		92BE76A824D325A500A0EF2E /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		92BE76A924D325A500A0EF2E /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		92BE76AA24D325A500A0EF2E /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		92BE76AC24D325A500A0EF2E /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
-		92BE76AD24D325A500A0EF2E /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		92E9A9EA188997A400168BBD /* DKAudioPlayerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DKAudioPlayerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92E9A9ED188997A400168BBD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		92E9A9EF188997A400168BBD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -116,6 +116,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9283E72D2917C67A008C13DB /* AudioTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9283E72F2917C6A7008C13DB /* AudioTableViewController.swift */,
+			);
+			path = AudioTableViewController;
+			sourceTree = "<group>";
+		};
 		92BACEE028F0A35500443679 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,12 +146,13 @@
 		92BE769224D325A500A0EF2E /* DKAudioPlayerExample */ = {
 			isa = PBXGroup;
 			children = (
+				9283E72E2917C6A7008C13DB /* DKAudioPlayerExample-Bridging-Header.h */,
+				9283E72D2917C67A008C13DB /* AudioTableViewController */,
 				92BE769324D325A500A0EF2E /* Sounds */,
 				92BE769724D325A500A0EF2E /* Supporting Files */,
 				92BE769E24D325A500A0EF2E /* Icons */,
 				92BE76A424D325A500A0EF2E /* AppDelegate */,
 				92BE76A724D325A500A0EF2E /* ViewController */,
-				92BE76AB24D325A500A0EF2E /* TableViewController */,
 			);
 			path = DKAudioPlayerExample;
 			sourceTree = "<group>";
@@ -198,15 +207,6 @@
 				92BE76AA24D325A500A0EF2E /* ViewController.h */,
 			);
 			path = ViewController;
-			sourceTree = "<group>";
-		};
-		92BE76AB24D325A500A0EF2E /* TableViewController */ = {
-			isa = PBXGroup;
-			children = (
-				92BE76AC24D325A500A0EF2E /* TableViewController.h */,
-				92BE76AD24D325A500A0EF2E /* TableViewController.m */,
-			);
-			path = TableViewController;
 			sourceTree = "<group>";
 		};
 		92E9A9E1188997A400168BBD = {
@@ -312,6 +312,7 @@
 				TargetAttributes = {
 					92E9A9E9188997A400168BBD = {
 						DevelopmentTeam = XFV3M47D7P;
+						LastSwiftMigration = 1410;
 					};
 					92E9AA0D188997A500168BBD = {
 						TestTargetID = 92E9A9E9188997A400168BBD;
@@ -372,8 +373,8 @@
 			files = (
 				92BE76BC24D325A500A0EF2E /* ViewController.m in Sources */,
 				92BE76BA24D325A500A0EF2E /* AppDelegate.m in Sources */,
+				9283E7302917C6A7008C13DB /* AudioTableViewController.swift in Sources */,
 				92BE76B324D325A500A0EF2E /* main.m in Sources */,
-				92BE76BD24D325A500A0EF2E /* TableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,6 +525,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = XFV3M47D7P;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -537,6 +539,9 @@
 				MARKETING_VERSION = 3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alwawee.DKAudioPlayerExample;
 				PRODUCT_NAME = DKAudioPlayerExample;
+				SWIFT_OBJC_BRIDGING_HEADER = "DKAudioPlayerExample/DKAudioPlayerExample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -545,6 +550,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = XFV3M47D7P;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -558,6 +564,8 @@
 				MARKETING_VERSION = 3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alwawee.DKAudioPlayerExample;
 				PRODUCT_NAME = DKAudioPlayerExample;
+				SWIFT_OBJC_BRIDGING_HEADER = "DKAudioPlayerExample/DKAudioPlayerExample-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -565,6 +573,7 @@
 		92E9AA23188997A500168BBD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PlayerViewSample.app/PlayerViewSample";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -587,6 +596,7 @@
 		92E9AA24188997A500168BBD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PlayerViewSample.app/PlayerViewSample";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

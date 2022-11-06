@@ -6,7 +6,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
-#import "TableViewController.h"
+#import "DKAudioPlayerExample-Swift.h"
 
 @implementation AppDelegate
 
@@ -20,7 +20,7 @@
     ViewController *viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
     [self.tabBarController addChildViewController:viewController];
     
-    TableViewController *tableViewController = [[TableViewController alloc] initWithStyle:UITableViewStylePlain];
+    AudioTableViewController *tableViewController = [[AudioTableViewController alloc] initWithStyle:UITableViewStylePlain];
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:tableViewController];
     [self.tabBarController addChildViewController:navigationController];
     
