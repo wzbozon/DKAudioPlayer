@@ -11,15 +11,12 @@
 		929C02DF28F0B3200021B3BF /* DKAudioPlayer in Frameworks */ = {isa = PBXBuildFile; productRef = 929C02DE28F0B3200021B3BF /* DKAudioPlayer */; };
 		92ACAD72292CCCAB00FA4C24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ACAD71292CCCAB00FA4C24 /* AppDelegate.swift */; };
 		92ACAD74292CCCC400FA4C24 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ACAD73292CCCC400FA4C24 /* ViewController.swift */; };
+		92ACAD76292CD03300FA4C24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92ACAD75292CD03300FA4C24 /* Assets.xcassets */; };
 		92BE76AE24D325A500A0EF2E /* sample.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 92BE769424D325A500A0EF2E /* sample.mp3 */; };
 		92BE76AF24D325A500A0EF2E /* sample2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 92BE769524D325A500A0EF2E /* sample2.mp3 */; };
 		92BE76B024D325A500A0EF2E /* sample1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 92BE769624D325A500A0EF2E /* sample1.mp3 */; };
 		92BE76B124D325A500A0EF2E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 92BE769824D325A500A0EF2E /* InfoPlist.strings */; };
 		92BE76B224D325A500A0EF2E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92BE769B24D325A500A0EF2E /* LaunchScreen.xib */; };
-		92BE76B524D325A500A0EF2E /* 259-list.png in Resources */ = {isa = PBXBuildFile; fileRef = 92BE769F24D325A500A0EF2E /* 259-list.png */; };
-		92BE76B624D325A500A0EF2E /* 42-photos.png in Resources */ = {isa = PBXBuildFile; fileRef = 92BE76A024D325A500A0EF2E /* 42-photos.png */; };
-		92BE76B724D325A500A0EF2E /* 259-list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92BE76A124D325A500A0EF2E /* 259-list@2x.png */; };
-		92BE76B824D325A500A0EF2E /* 42-photos@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92BE76A224D325A500A0EF2E /* 42-photos@2x.png */; };
 		92BE76BB24D325A500A0EF2E /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92BE76A824D325A500A0EF2E /* ViewController.xib */; };
 		92E9A9EE188997A400168BBD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E9A9ED188997A400168BBD /* Foundation.framework */; };
 		92E9A9F0188997A400168BBD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E9A9EF188997A400168BBD /* CoreGraphics.framework */; };
@@ -55,10 +52,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		9283E72E2917C6A7008C13DB /* DKAudioPlayerExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DKAudioPlayerExample-Bridging-Header.h"; sourceTree = "<group>"; };
 		9283E72F2917C6A7008C13DB /* AudioTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioTableViewController.swift; sourceTree = "<group>"; };
 		92ACAD71292CCCAB00FA4C24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92ACAD73292CCCC400FA4C24 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		92ACAD75292CD03300FA4C24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92BACEE628F0ACB700443679 /* DKAudioPlayerOld.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKAudioPlayerOld.h; sourceTree = "<group>"; };
 		92BACEE728F0ACB700443679 /* DKAudioPlayer.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = DKAudioPlayer.podspec; sourceTree = "<group>"; };
 		92BACEE828F0ACB700443679 /* DKAudioPlayerOld.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKAudioPlayerOld.m; sourceTree = "<group>"; };
@@ -70,10 +67,6 @@
 		92BE769924D325A500A0EF2E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		92BE769B24D325A500A0EF2E /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		92BE769D24D325A500A0EF2E /* DKAudioPlayerExample-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "DKAudioPlayerExample-Info.plist"; sourceTree = "<group>"; };
-		92BE769F24D325A500A0EF2E /* 259-list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "259-list.png"; sourceTree = "<group>"; };
-		92BE76A024D325A500A0EF2E /* 42-photos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "42-photos.png"; sourceTree = "<group>"; };
-		92BE76A124D325A500A0EF2E /* 259-list@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "259-list@2x.png"; sourceTree = "<group>"; };
-		92BE76A224D325A500A0EF2E /* 42-photos@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "42-photos@2x.png"; sourceTree = "<group>"; };
 		92BE76A824D325A500A0EF2E /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		92E9A9EA188997A400168BBD /* DKAudioPlayerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DKAudioPlayerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92E9A9ED188997A400168BBD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -141,11 +134,9 @@
 		92BE769224D325A500A0EF2E /* DKAudioPlayerExample */ = {
 			isa = PBXGroup;
 			children = (
-				9283E72E2917C6A7008C13DB /* DKAudioPlayerExample-Bridging-Header.h */,
 				9283E72D2917C67A008C13DB /* AudioTableViewController */,
 				92BE769324D325A500A0EF2E /* Sounds */,
 				92BE769724D325A500A0EF2E /* Supporting Files */,
-				92BE769E24D325A500A0EF2E /* Icons */,
 				92BE76A424D325A500A0EF2E /* AppDelegate */,
 				92BE76A724D325A500A0EF2E /* ViewController */,
 			);
@@ -168,19 +159,9 @@
 				92BE769824D325A500A0EF2E /* InfoPlist.strings */,
 				92BE769B24D325A500A0EF2E /* LaunchScreen.xib */,
 				92BE769D24D325A500A0EF2E /* DKAudioPlayerExample-Info.plist */,
+				92ACAD75292CD03300FA4C24 /* Assets.xcassets */,
 			);
 			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		92BE769E24D325A500A0EF2E /* Icons */ = {
-			isa = PBXGroup;
-			children = (
-				92BE769F24D325A500A0EF2E /* 259-list.png */,
-				92BE76A024D325A500A0EF2E /* 42-photos.png */,
-				92BE76A124D325A500A0EF2E /* 259-list@2x.png */,
-				92BE76A224D325A500A0EF2E /* 42-photos@2x.png */,
-			);
-			path = Icons;
 			sourceTree = "<group>";
 		};
 		92BE76A424D325A500A0EF2E /* AppDelegate */ = {
@@ -334,16 +315,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92BE76B724D325A500A0EF2E /* 259-list@2x.png in Resources */,
 				92BE76B124D325A500A0EF2E /* InfoPlist.strings in Resources */,
+				92ACAD76292CD03300FA4C24 /* Assets.xcassets in Resources */,
 				92BE76B024D325A500A0EF2E /* sample1.mp3 in Resources */,
 				92BE76B224D325A500A0EF2E /* LaunchScreen.xib in Resources */,
 				92BE76AF24D325A500A0EF2E /* sample2.mp3 in Resources */,
-				92BE76B524D325A500A0EF2E /* 259-list.png in Resources */,
 				92BE76AE24D325A500A0EF2E /* sample.mp3 in Resources */,
 				92BE76BB24D325A500A0EF2E /* ViewController.xib in Resources */,
-				92BE76B824D325A500A0EF2E /* 42-photos@2x.png in Resources */,
-				92BE76B624D325A500A0EF2E /* 42-photos.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,7 +506,6 @@
 				MARKETING_VERSION = 3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alwawee.DKAudioPlayerExample;
 				PRODUCT_NAME = DKAudioPlayerExample;
-				SWIFT_OBJC_BRIDGING_HEADER = "DKAudioPlayerExample/DKAudioPlayerExample-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				WRAPPER_EXTENSION = app;
@@ -552,7 +529,6 @@
 				MARKETING_VERSION = 3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alwawee.DKAudioPlayerExample;
 				PRODUCT_NAME = DKAudioPlayerExample;
-				SWIFT_OBJC_BRIDGING_HEADER = "DKAudioPlayerExample/DKAudioPlayerExample-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				WRAPPER_EXTENSION = app;
 			};
