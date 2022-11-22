@@ -69,7 +69,7 @@ class AudioTableViewController: UITableViewController {
         else { return }
 
         let containerView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 80))
-        containerView.backgroundColor = .systemBackground
+        containerView.backgroundColor = .systemGray5
 
         audioPlayer = DKAudioPlayer(audioFilePath: audioFilePath)
         audioPlayer.translatesAutoresizingMaskIntoConstraints = false

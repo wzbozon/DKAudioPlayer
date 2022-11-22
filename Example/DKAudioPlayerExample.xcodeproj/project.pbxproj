@@ -9,19 +9,18 @@
 /* Begin PBXBuildFile section */
 		9283E7302917C6A7008C13DB /* AudioTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9283E72F2917C6A7008C13DB /* AudioTableViewController.swift */; };
 		929C02DF28F0B3200021B3BF /* DKAudioPlayer in Frameworks */ = {isa = PBXBuildFile; productRef = 929C02DE28F0B3200021B3BF /* DKAudioPlayer */; };
+		92ACAD72292CCCAB00FA4C24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ACAD71292CCCAB00FA4C24 /* AppDelegate.swift */; };
+		92ACAD74292CCCC400FA4C24 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ACAD73292CCCC400FA4C24 /* ViewController.swift */; };
 		92BE76AE24D325A500A0EF2E /* sample.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 92BE769424D325A500A0EF2E /* sample.mp3 */; };
 		92BE76AF24D325A500A0EF2E /* sample2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 92BE769524D325A500A0EF2E /* sample2.mp3 */; };
 		92BE76B024D325A500A0EF2E /* sample1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 92BE769624D325A500A0EF2E /* sample1.mp3 */; };
 		92BE76B124D325A500A0EF2E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 92BE769824D325A500A0EF2E /* InfoPlist.strings */; };
 		92BE76B224D325A500A0EF2E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92BE769B24D325A500A0EF2E /* LaunchScreen.xib */; };
-		92BE76B324D325A500A0EF2E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 92BE769C24D325A500A0EF2E /* main.m */; };
 		92BE76B524D325A500A0EF2E /* 259-list.png in Resources */ = {isa = PBXBuildFile; fileRef = 92BE769F24D325A500A0EF2E /* 259-list.png */; };
 		92BE76B624D325A500A0EF2E /* 42-photos.png in Resources */ = {isa = PBXBuildFile; fileRef = 92BE76A024D325A500A0EF2E /* 42-photos.png */; };
 		92BE76B724D325A500A0EF2E /* 259-list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92BE76A124D325A500A0EF2E /* 259-list@2x.png */; };
 		92BE76B824D325A500A0EF2E /* 42-photos@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92BE76A224D325A500A0EF2E /* 42-photos@2x.png */; };
-		92BE76BA24D325A500A0EF2E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92BE76A624D325A500A0EF2E /* AppDelegate.m */; };
 		92BE76BB24D325A500A0EF2E /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92BE76A824D325A500A0EF2E /* ViewController.xib */; };
-		92BE76BC24D325A500A0EF2E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92BE76A924D325A500A0EF2E /* ViewController.m */; };
 		92E9A9EE188997A400168BBD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E9A9ED188997A400168BBD /* Foundation.framework */; };
 		92E9A9F0188997A400168BBD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E9A9EF188997A400168BBD /* CoreGraphics.framework */; };
 		92E9A9F2188997A400168BBD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E9A9F1188997A400168BBD /* UIKit.framework */; };
@@ -58,6 +57,8 @@
 /* Begin PBXFileReference section */
 		9283E72E2917C6A7008C13DB /* DKAudioPlayerExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DKAudioPlayerExample-Bridging-Header.h"; sourceTree = "<group>"; };
 		9283E72F2917C6A7008C13DB /* AudioTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioTableViewController.swift; sourceTree = "<group>"; };
+		92ACAD71292CCCAB00FA4C24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		92ACAD73292CCCC400FA4C24 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		92BACEE628F0ACB700443679 /* DKAudioPlayerOld.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKAudioPlayerOld.h; sourceTree = "<group>"; };
 		92BACEE728F0ACB700443679 /* DKAudioPlayer.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = DKAudioPlayer.podspec; sourceTree = "<group>"; };
 		92BACEE828F0ACB700443679 /* DKAudioPlayerOld.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKAudioPlayerOld.m; sourceTree = "<group>"; };
@@ -67,19 +68,13 @@
 		92BE769524D325A500A0EF2E /* sample2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sample2.mp3; sourceTree = "<group>"; };
 		92BE769624D325A500A0EF2E /* sample1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sample1.mp3; sourceTree = "<group>"; };
 		92BE769924D325A500A0EF2E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		92BE769A24D325A500A0EF2E /* DKAudioPlayerExample-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DKAudioPlayerExample-Prefix.pch"; sourceTree = "<group>"; };
 		92BE769B24D325A500A0EF2E /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
-		92BE769C24D325A500A0EF2E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		92BE769D24D325A500A0EF2E /* DKAudioPlayerExample-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "DKAudioPlayerExample-Info.plist"; sourceTree = "<group>"; };
 		92BE769F24D325A500A0EF2E /* 259-list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "259-list.png"; sourceTree = "<group>"; };
 		92BE76A024D325A500A0EF2E /* 42-photos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "42-photos.png"; sourceTree = "<group>"; };
 		92BE76A124D325A500A0EF2E /* 259-list@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "259-list@2x.png"; sourceTree = "<group>"; };
 		92BE76A224D325A500A0EF2E /* 42-photos@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "42-photos@2x.png"; sourceTree = "<group>"; };
-		92BE76A524D325A500A0EF2E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		92BE76A624D325A500A0EF2E /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		92BE76A824D325A500A0EF2E /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
-		92BE76A924D325A500A0EF2E /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		92BE76AA24D325A500A0EF2E /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		92E9A9EA188997A400168BBD /* DKAudioPlayerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DKAudioPlayerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92E9A9ED188997A400168BBD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		92E9A9EF188997A400168BBD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -171,9 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				92BE769824D325A500A0EF2E /* InfoPlist.strings */,
-				92BE769A24D325A500A0EF2E /* DKAudioPlayerExample-Prefix.pch */,
 				92BE769B24D325A500A0EF2E /* LaunchScreen.xib */,
-				92BE769C24D325A500A0EF2E /* main.m */,
 				92BE769D24D325A500A0EF2E /* DKAudioPlayerExample-Info.plist */,
 			);
 			path = "Supporting Files";
@@ -193,8 +186,7 @@
 		92BE76A424D325A500A0EF2E /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
-				92BE76A524D325A500A0EF2E /* AppDelegate.h */,
-				92BE76A624D325A500A0EF2E /* AppDelegate.m */,
+				92ACAD71292CCCAB00FA4C24 /* AppDelegate.swift */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -203,8 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				92BE76A824D325A500A0EF2E /* ViewController.xib */,
-				92BE76A924D325A500A0EF2E /* ViewController.m */,
-				92BE76AA24D325A500A0EF2E /* ViewController.h */,
+				92ACAD73292CCCC400FA4C24 /* ViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -371,10 +362,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92BE76BC24D325A500A0EF2E /* ViewController.m in Sources */,
-				92BE76BA24D325A500A0EF2E /* AppDelegate.m in Sources */,
+				92ACAD74292CCCC400FA4C24 /* ViewController.swift in Sources */,
 				9283E7302917C6A7008C13DB /* AudioTableViewController.swift in Sources */,
-				92BE76B324D325A500A0EF2E /* main.m in Sources */,
+				92ACAD72292CCCAB00FA4C24 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,7 +519,6 @@
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = XFV3M47D7P;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DKAudioPlayerExample/Supporting Files/DKAudioPlayerExample-Prefix.pch";
 				INFOPLIST_FILE = "DKAudioPlayerExample/Supporting Files/DKAudioPlayerExample-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -554,7 +543,6 @@
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = XFV3M47D7P;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DKAudioPlayerExample/Supporting Files/DKAudioPlayerExample-Prefix.pch";
 				INFOPLIST_FILE = "DKAudioPlayerExample/Supporting Files/DKAudioPlayerExample-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
